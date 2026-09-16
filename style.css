@@ -142,13 +142,16 @@ body.mariposas-evento::after {
 
   transition: opacity 1.2s ease;
 }
+
 .pagina-invitacion::before {
   content: "";
-  position: absolute;
+  position: fixed;      /* volvemos a fixed */
   inset: 0;
+  width: 100vw;
+  height: 100dvh;        /* 👈 clave: solo una pantalla, no todo el contenido */
   background-color: #fff;
   background-image: var(--fondo-jenny);
-  background-size: 70% auto;
+  background-size: cover;
   background-position: var(--fondo-posicion-pc);
   background-repeat: no-repeat;
   z-index: 0;
@@ -157,17 +160,15 @@ body.mariposas-evento::after {
 
 .pagina-invitacion::after {
   content: "";
-
-  position: absolute;
-
+  position: fixed;      /* mismo cambio acá */
   inset: 0;
-
+  width: 100vw;
+  height: 100dvh;
   background: linear-gradient(rgba(8, 12, 18, 0.48), rgba(8, 12, 18, 0.58));
-
   z-index: 1;
-
   pointer-events: none;
-}
+} 
+
 
 .pagina-visible {
   opacity: 1;
