@@ -8,24 +8,7 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-}
-
-/* =========================
-   FONDO PRINCIPAL
-   (antes vivía en .pagina-invitacion::before con
-   position:fixed/absolute — eso causaba el bug de
-   "agrandar/achicar" al scrollear en mobile.
-   Ahora vive directo en <html> y scrollea normal
-   con el contenido, sin recálculos raros)
-========================= */
-
-html {
-  background-color: #0d1118;
-  background-image: var(--fondo-jenny);
-  background-size: cover;
-  background-position: var(--fondo-posicion-pc);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: #0d1118;
 }
 
 body {
@@ -160,21 +143,32 @@ body.mariposas-evento::after {
   transition: opacity 1.2s ease;
 }
 
-/* El fondo con imagen ahora vive en <html> (ver arriba).
-   Acá solo queda el velo oscuro para dar contraste al texto. */
-.pagina-invitacion::after {
+.pagina-invitacion::before {
   content: "";
-
-  position: absolute;
-
+  position: fixed;      /* volvemos a fixed */
   inset: 0;
-
-  background: linear-gradient(rgba(8, 12, 18, 0.48), rgba(8, 12, 18, 0.58));
-
-  z-index: 1;
-
+  width: 100vw;
+  height: 100dvh;        /* 👈 clave: solo una pantalla, no todo el contenido */
+  background-color: #fff;
+  background-image: var(--fondo-jenny);
+  background-size: cover;
+  background-position: var(--fondo-posicion-pc);
+  background-repeat: no-repeat;
+  z-index: 0;
   pointer-events: none;
 }
+
+.pagina-invitacion::after {
+  content: "";
+  position: fixed;      /* mismo cambio acá */
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: linear-gradient(rgba(8, 12, 18, 0.48), rgba(8, 12, 18, 0.58));
+  z-index: 1;
+  pointer-events: none;
+} 
+
 
 .pagina-visible {
   opacity: 1;
@@ -1562,10 +1556,6 @@ body.mariposas-evento::after {
 ========================= */
 
 @media (max-width: 600px) {
-  html {
-    background-position: var(--fondo-posicion-mobile);
-  }
-
   body::before,
   body::after {
     top: 18px;
