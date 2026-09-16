@@ -23,7 +23,7 @@ body {
 
 :root {
 
-    --fondo-jenny: url("img/fondo1.jpg");
+    --fondo-jenny: url("img/Fondoprincipal.jpg");
 
     --fondo-posicion-pc: center center;
 
@@ -182,17 +182,14 @@ body.mariposas-evento::after {
     content: "";
     position: fixed;
     inset: 0;
-
     background-color: #fff;
     background-image: var(--fondo-jenny);
-    background-size: cover;
+    background-size: 70% auto;
     background-position: var(--fondo-posicion-pc);
     background-repeat: no-repeat;
-
     z-index: 0;
     pointer-events: none;
 }
-
 .pagina-invitacion::after {
 
     content: "";
