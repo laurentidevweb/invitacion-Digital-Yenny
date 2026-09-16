@@ -1,35 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  width: 100%;
-  min-height: 100%;
-  background: #0d1118;
+    width: 100%;
+    min-height: 100%;
+    background: #0d1118;
 }
 
 body {
-  overflow-x: hidden;
-  font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+    font-family: Georgia, "Times New Roman", serif;
 }
+
 
 /* =========================
    VARIABLES
 ========================= */
 
 :root {
-  --fondo-jenny: url("img/fondo1.jpg");
-  --fondo-posicion-pc: center center;
-  --fondo-posicion-mobile: center center;
-  --dorado: #d8b56a;
-  --dorado-claro: #e5c982;
-  --dorado-brillo: #f0d998;
-  --fucsia: #ff2f92;
-  --texto-secundario: #f4eee2;
+
+    --fondo-jenny: url("img/fondo1.jpg");
+
+    --fondo-posicion-pc: center center;
+
+    --fondo-posicion-mobile: center center;
+
+    --dorado: #d8b56a;
+
+    --dorado-claro: #e5c982;
+
+    --dorado-brillo: #f0d998;
+
+    --fucsia: #ff2f92;
+
+    --texto-secundario: #f4eee2;
+
 }
+
 
 /* =========================
    MARIPOSAS DECORATIVAS FIJAS
@@ -37,1167 +48,1971 @@ body {
 
 body::before,
 body::after {
-  content: "";
-  position: fixed;
-  top: 24px;
-  width: 48px;
-  height: 48px;
-  background-image: url("img/mariposa.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0;
-  filter:
-    drop-shadow(
-      0 0 8px
-      rgba(255, 255, 255, 0.22)
-    );
-  pointer-events: none;
-  z-index: 9000;
-  transform: translateY(-18px);
-  transition:
-    opacity 1.1s cubic-bezier(0.45, 0, 0.25, 1),
-    transform 1.1s cubic-bezier(0.45, 0, 0.25, 1);
+
+    content: "";
+
+    position: fixed;
+
+    top: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    background-image:
+        url("img/mariposa.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    opacity: 0;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255, 255, 255, 0.22)
+        );
+
+    pointer-events: none;
+
+    z-index: 9000;
+
+    transform:
+        translateY(-18px);
+
+    transition:
+        opacity 1.1s
+        cubic-bezier(0.45, 0, 0.25, 1),
+
+        transform 1.1s
+        cubic-bezier(0.45, 0, 0.25, 1);
 }
 
 body::before {
-  left: 18px;
+    left: 18px;
 }
 
 body::after {
-  right: 18px;
-  transform:
-    translateY(-18px)
-    scaleX(-1);
+
+    right: 18px;
+
+    transform:
+        translateY(-18px)
+        scaleX(-1);
 }
 
 body.mariposas-hero::before,
 body.mariposas-hero::after {
-  opacity: 0.72;
-  transform: translateY(0);
+
+    opacity: 0.72;
+
+    transform:
+        translateY(0);
 }
 
 body.mariposas-hero::after {
-  transform:
-    translateY(0)
-    scaleX(-1);
+
+    transform:
+        translateY(0)
+        scaleX(-1);
 }
 
 body.mariposas-saliendo::before,
 body.mariposas-saliendo::after {
-  opacity: 0;
-  transform: translateY(-18px);
+
+    opacity: 0;
+
+    transform:
+        translateY(-18px);
 }
 
 body.mariposas-saliendo::after {
-  transform:
-    translateY(-18px)
-    scaleX(-1);
+
+    transform:
+        translateY(-18px)
+        scaleX(-1);
 }
 
 body.mariposas-evento::before,
 body.mariposas-evento::after {
-  opacity: 0.72;
-  transform: translateY(0);
+
+    opacity: 0.72;
+
+    transform:
+        translateY(0);
 }
 
 body.mariposas-evento::after {
-  transform:
-    translateY(0)
-    scaleX(-1);
+
+    transform:
+        translateY(0)
+        scaleX(-1);
 }
+
 
 /* =========================
    PÁGINA DE INVITACIÓN
 ========================= */
 
 .pagina-invitacion {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: transparent;
-  color: #fff;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1.2s ease;
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: transparent;
+
+    color: #fff;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 1.2s ease;
 }
 
-/* =========================
-   FONDO PINTEREST
-========================= */
-
 .pagina-invitacion::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: var(--fondo-jenny);
-  background-size: cover;
-  background-position:
-    var(--fondo-posicion-pc);
-  background-repeat: no-repeat;
-  z-index: 0;
-  pointer-events: none;
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        var(--fondo-jenny);
+
+    background-size: cover;
+
+    background-position:
+        var(--fondo-posicion-pc);
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+
+    pointer-events: none;
 }
 
 .pagina-invitacion::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    linear-gradient(
-      rgba(8, 12, 18, 0.48),
-      rgba(8, 12, 18, 0.58)
-    );
-  z-index: 1;
-  pointer-events: none;
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(8, 12, 18, 0.48),
+            rgba(8, 12, 18, 0.58)
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
 }
 
 .pagina-visible {
-  opacity: 1;
-  visibility: visible;
+
+    opacity: 1;
+
+    visibility: visible;
 }
 
 .pagina-invitacion:has(.evento-activo) {
-  overflow-x: hidden;
-  overflow-y: auto;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
 }
+
 
 /* =========================
    HERO JENNY
 ========================= */
 
 .hero-invitacion {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: transparent;
-  z-index: 5;
-  transition:
-    opacity 1.4s cubic-bezier(0.65, 0, 0.2, 1),
-    transform 1.4s cubic-bezier(0.65, 0, 0.2, 1);
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    z-index: 5;
+
+    transition:
+        opacity 1.4s
+        cubic-bezier(0.65, 0, 0.2, 1),
+
+        transform 1.4s
+        cubic-bezier(0.65, 0, 0.2, 1);
 }
 
 .hero-mariposa {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(85vw, 520px);
-  transform:
-    translate(-50%, -50%);
-  opacity: 0;
-  filter:
-    blur(0.2px)
-    drop-shadow(
-      0 0 30px
-      rgba(255, 255, 255, 0.12)
-    );
-  pointer-events: none;
-  transition: opacity 1.4s ease;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(85vw, 520px);
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 0;
+
+    filter:
+        blur(0.2px)
+        drop-shadow(
+            0 0 30px
+            rgba(255, 255, 255, 0.12)
+        );
+
+    pointer-events: none;
+
+    transition:
+        opacity 1.4s ease;
 }
 
 .hero-mariposa img {
-  display: block;
-  width: 100%;
-  height: auto;
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
 }
+
 
 /* =========================
    CONTENIDO HERO
 ========================= */
 
 .hero-contenido {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(35px);
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
 }
 
 .hero-superior {
-  margin-bottom: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(15px, 2.2vw, 21px);
-  font-weight: 400;
-  letter-spacing: 0.43em;
-  color: var(--dorado);
+
+    margin-bottom: 16px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(15px, 2.2vw, 21px);
+
+    font-weight: 400;
+
+    letter-spacing:
+        0.43em;
+
+    color:
+        var(--dorado);
 }
 
 .hero-contenido h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(70px, 14vw, 160px);
-  line-height: 0.95;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: var(--dorado-claro);
-  text-shadow:
-    0 0 25px rgba(216, 181, 106, 0.20),
-    0 0 70px rgba(216, 181, 106, 0.12);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(70px, 14vw, 160px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        var(--dorado-claro);
+
+    text-shadow:
+        0 0 25px
+        rgba(216, 181, 106, 0.20),
+
+        0 0 70px
+        rgba(216, 181, 106, 0.12);
 }
 
 .hero-linea {
-  width: clamp(60px, 12vw, 110px);
-  height: 1px;
-  margin: 27px 0 22px;
-  background:
-    linear-gradient(
-      to right,
-      transparent,
-      var(--dorado),
-      transparent
-    );
-  transform: scaleX(0);
+
+    width:
+        clamp(60px, 12vw, 110px);
+
+    height: 1px;
+
+    margin:
+        27px 0 22px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--dorado),
+            transparent
+        );
+
+    transform:
+        scaleX(0);
 }
 
 .hero-fecha {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(16px, 2.5vw, 22px);
-  letter-spacing: 0.32em;
-  color: var(--dorado-claro);
-  text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(16px, 2.5vw, 22px);
+
+    letter-spacing:
+        0.32em;
+
+    color:
+        var(--dorado-claro);
+
+    text-decoration:
+        none;
 }
 
 .pagina-visible .hero-mariposa {
-  animation:
-    aparecer-mariposa
-    2.2s
-    cubic-bezier(0.2, 0.7, 0.2, 1)
-    forwards;
+
+    animation:
+        aparecer-mariposa
+        2.2s
+        cubic-bezier(0.2, 0.7, 0.2, 1)
+        forwards;
 }
 
 .pagina-visible .hero-contenido {
-  animation:
-    aparecer-contenido
-    1.5s
-    cubic-bezier(0.2, 0.7, 0.2, 1)
-    0.65s
-    forwards;
+
+    animation:
+        aparecer-contenido
+        1.5s
+        cubic-bezier(0.2, 0.7, 0.2, 1)
+        0.65s
+        forwards;
 }
 
 .pagina-visible .hero-linea {
-  animation:
-    aparecer-linea
-    1.2s
-    ease
-    1.15s
-    forwards;
+
+    animation:
+        aparecer-linea
+        1.2s
+        ease
+        1.15s
+        forwards;
 }
+
 
 @keyframes aparecer-mariposa {
-  0% {
-    opacity: 0;
-    transform:
-      translate(-50%, -50%)
-      scale(0.75);
-  }
 
-  100% {
-    opacity: 0.1;
-    transform:
-      translate(-50%, -50%)
-      scale(1);
-  }
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.75);
+    }
+
+    100% {
+
+        opacity: 0.1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
 }
+
 
 @keyframes aparecer-contenido {
-  0% {
-    opacity: 0;
-    transform: translateY(35px);
-  }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
 }
+
 
 @keyframes aparecer-linea {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
 
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
+    0% {
+
+        transform:
+            scaleX(0);
+
+        opacity: 0;
+    }
+
+    100% {
+
+        transform:
+            scaleX(1);
+
+        opacity: 1;
+    }
 }
+
 
 /* =========================
    TRANSICIÓN HERO → EVENTO
 ========================= */
 
 .pagina-invitacion.pasar-a-evento
-  .hero-invitacion {
-  opacity: 0;
-  transform:
-    scale(1.035)
-    translateY(-25px);
-  pointer-events: none;
+.hero-invitacion {
+
+    opacity: 0;
+
+    transform:
+        scale(1.035)
+        translateY(-25px);
+
+    pointer-events: none;
 }
+
 
 /* =========================
    SECCIÓN EVENTO
 ========================= */
 
 .seccion-evento {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  margin-top: -100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow: visible;
-  background: transparent;
-  opacity: 0;
-  transform:
-    scale(0.985)
-    translateY(25px);
-  pointer-events: none;
-  transition:
-    opacity 1.5s cubic-bezier(0.2, 0.7, 0.2, 1),
-    transform 1.5s cubic-bezier(0.2, 0.7, 0.2, 1);
-  z-index: 4;
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin-top: -100vh;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    overflow: visible;
+
+    background: transparent;
+
+    opacity: 0;
+
+    transform:
+        scale(0.985)
+        translateY(25px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 1.5s
+        cubic-bezier(0.2, 0.7, 0.2, 1),
+
+        transform 1.5s
+        cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    z-index: 4;
 }
 
 .seccion-evento.evento-activo {
-  opacity: 1;
-  transform:
-    scale(1)
-    translateY(0);
-  pointer-events: auto;
+
+    opacity: 1;
+
+    transform:
+        scale(1)
+        translateY(0);
+
+    pointer-events: auto;
 }
+
 
 /* =========================
    MARIPOSA DE FONDO
 ========================= */
 
 .evento-fondo-mariposa {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: min(100vw, 650px);
-  transform:
-    translate(-50%, -50%);
-  opacity: 0.045;
-  filter: blur(0.5px);
-  pointer-events: none;
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(100vw, 650px);
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 0.045;
+
+    filter:
+        blur(0.5px);
+
+    pointer-events: none;
 }
 
 .evento-fondo-mariposa img {
-  display: block;
-  width: 100%;
-  height: auto;
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
 }
+
 
 /* =========================
    CONTENIDO EVENTO
 ========================= */
 
 .evento-contenido {
-  position: relative;
-  z-index: 5;
-  width: min(90vw, 650px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 13vh 20px 70px;
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(90vw, 650px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        13vh 20px 70px;
 }
+
 
 /* =========================
    UNA NOCHE
 ========================= */
 
 .evento-etiqueta {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(18px, 2.3vw, 22px);
-  letter-spacing: 0.35em;
-  color: var(--dorado);
-  margin-bottom: 13px;
-  text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(18px, 2.3vw, 22px);
+
+    letter-spacing:
+        0.35em;
+
+    color:
+        var(--dorado);
+
+    margin-bottom: 13px;
+
+    text-decoration:
+        none;
 }
+
 
 /* =========================
    TÍTULO
 ========================= */
 
 .evento-titulo {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(48px, 8.5vw, 84px);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1;
-  color: var(--dorado-claro);
-  letter-spacing: 0.015em;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(48px, 8.5vw, 84px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1;
+
+    color:
+        var(--dorado-claro);
+
+    letter-spacing:
+        0.015em;
 }
+
 
 /* =========================
    LÍNEA
 ========================= */
 
 .evento-linea {
-  width: clamp(65px, 12vw, 105px);
-  height: 1px;
-  margin: 30px 0 27px;
-  background:
-    linear-gradient(
-      to right,
-      transparent,
-      var(--dorado),
-      transparent
-    );
+
+    width:
+        clamp(65px, 12vw, 105px);
+
+    height: 1px;
+
+    margin:
+        30px 0 27px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--dorado),
+            transparent
+        );
 }
+
 
 /* =========================
    FECHA
 ========================= */
 
 .evento-fecha {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(21px, 3.4vw, 28px);
-  letter-spacing: 0.15em;
-  color: var(--texto-secundario);
-  font-weight: 500;
-  text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(21px, 3.4vw, 28px);
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--texto-secundario);
+
+    font-weight: 500;
+
+    text-decoration:
+        none;
 }
 
 .evento-separador {
-  color: var(--dorado);
-  font-size: 19px;
-  text-decoration: none;
+
+    color:
+        var(--dorado);
+
+    font-size: 19px;
+
+    text-decoration:
+        none;
 }
 
 .evento-dia-semana {
-  margin-top: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  letter-spacing: 0.38em;
-  color: var(--texto-secundario);
-  font-weight: 500;
-  text-decoration: none;
+
+    margin-top: 16px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing:
+        0.38em;
+
+    color:
+        var(--texto-secundario);
+
+    font-weight: 500;
+
+    text-decoration:
+        none;
 }
+
 
 /* =========================
    DETALLES
 ========================= */
 
 .evento-detalle {
-  width: min(100%, 470px);
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+
+    width:
+        min(100%, 470px);
+
+    margin-top: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
 }
 
 .detalle-etiqueta {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  letter-spacing: 0.30em;
-  color: var(--dorado);
-  font-weight: 500;
-  text-decoration-line: underline;
-  text-decoration-color: var(--dorado);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing:
+        0.30em;
+
+    color:
+        var(--dorado);
+
+    font-weight: 500;
+
+    text-decoration-line:
+        underline;
+
+    text-decoration-color:
+        var(--dorado);
+
+    text-decoration-thickness:
+        1px;
+
+    text-underline-offset:
+        7px;
 }
 
 .detalle-valor {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(15px, 2.3vw, 19px);
-  line-height: 1.6;
-  letter-spacing: 0.10em;
-  color: var(--texto-secundario);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(15px, 2.3vw, 19px);
+
+    line-height: 1.6;
+
+    letter-spacing:
+        0.10em;
+
+    color:
+        var(--texto-secundario);
 }
+
 
 /* =========================
    LA QUINTA
 ========================= */
 
 .quinta-fucsia {
-  color: #fff;
-  text-shadow: none;
+
+    color: #fff;
+
+    text-shadow:
+        none;
 }
+
 
 /* =========================
    DRESS CODE
 ========================= */
 
 .evento-dress {
-  margin-top: 34px;
+
+    margin-top: 34px;
 }
+
 
 /* =========================
    DECORACIÓN
 ========================= */
 
 .evento-decoracion {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 50px;
 }
 
 .evento-decoracion span {
-  display: block;
-  width: 27px;
-  height: 1px;
-  background: var(--dorado);
+
+    display: block;
+
+    width: 27px;
+
+    height: 1px;
+
+    background:
+        var(--dorado);
 }
 
 .evento-decoracion i {
-  display: block;
-  width: 6px;
-  height: 6px;
-  border: 1px solid var(--dorado);
-  transform: rotate(45deg);
+
+    display: block;
+
+    width: 6px;
+
+    height: 6px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    transform:
+        rotate(45deg);
 }
+
 
 /* =========================
    REVEAL DATOS
 ========================= */
 
 .reveal-evento {
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
-    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity 0.9s
+        cubic-bezier(0.2, 0.7, 0.2, 1),
+
+        transform 0.9s
+        cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .reveal-evento.evento-visible {
-  opacity: 1;
-  transform: translateY(0);
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
 }
+
 
 /* =========================
    INTRO
 ========================= */
 
 .intro {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(
-      circle at center,
-      #171717 0%,
-      #080808 48%,
-      #000 100%
-    );
-  overflow: hidden;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 1.2s ease;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #171717 0%,
+            #080808 48%,
+            #000 100%
+        );
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+    opacity: 1;
+
+    transition:
+        opacity 1.2s ease;
 }
 
 .luz-central {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 45vw;
-  height: 45vw;
-  max-width: 500px;
-  max-height: 500px;
-  transform:
-    translate(-50%, -50%);
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.04) 30%,
-      transparent 70%
-    );
-  filter: blur(20px);
-  pointer-events: none;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 45vw;
+    height: 45vw;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.04) 30%,
+            transparent 70%
+        );
+
+    filter:
+        blur(20px);
+
+    pointer-events: none;
 }
+
 
 /* =========================
    PORTÓN
 ========================= */
 
 .porton {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(96vw, 1000px);
-  height: min(94vh, 900px);
-  transform:
-    translate(-50%, -50%);
-  display: flex;
-  overflow: visible;
-  z-index: 20;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(96vw, 1000px);
+
+    height:
+        min(94vh, 900px);
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    overflow: visible;
+
+    z-index: 20;
 }
 
 .hoja {
-  width: 50%;
-  height: 100%;
-  overflow: visible;
-  transform-style: preserve-3d;
-  transition:
-    transform 2.8s
-    cubic-bezier(0.65, 0, 0.2, 1);
+
+    width: 50%;
+
+    height: 100%;
+
+    overflow: visible;
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform 2.8s
+        cubic-bezier(0.65, 0, 0.2, 1);
 }
 
 .hierro {
-  fill: none;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+
+    fill: none;
+
+    stroke-linejoin:
+        round;
+
+    stroke-linecap:
+        round;
 }
 
 .hierro.grueso {
-  fill: #080808;
-  stroke: #999;
-  stroke-width: 6;
+
+    fill: #080808;
+
+    stroke: #999;
+
+    stroke-width: 6;
 }
 
 .hierro.medio {
-  stroke: #999;
-  stroke-width: 3;
+
+    stroke: #999;
+
+    stroke-width: 3;
 }
 
 .barrotes line {
-  stroke: #bdbdbd;
-  stroke-width: 4;
-  stroke-linecap: round;
+
+    stroke: #bdbdbd;
+
+    stroke-width: 4;
+
+    stroke-linecap:
+        round;
 }
 
 .ornamento path {
-  fill: none;
-  stroke: #cfcfcf;
-  stroke-width: 4;
-  stroke-linecap: round;
+
+    fill: none;
+
+    stroke: #cfcfcf;
+
+    stroke-width: 4;
+
+    stroke-linecap:
+        round;
 }
 
 .decoracion circle {
-  fill: #d8d8d8;
+
+    fill: #d8d8d8;
 }
 
 .intro.abriendo .hoja-izquierda {
-  transform:
-    perspective(1800px)
-    rotateY(-75deg)
-    translateX(-35px);
+
+    transform:
+        perspective(1800px)
+        rotateY(-75deg)
+        translateX(-35px);
 }
 
 .intro.abriendo .hoja-derecha {
-  transform:
-    perspective(1800px)
-    rotateY(75deg)
-    translateX(35px);
+
+    transform:
+        perspective(1800px)
+        rotateY(75deg)
+        translateX(35px);
 }
+
 
 /* =========================
    CENTRO PORTÓN
 ========================= */
 
 .centro-porton {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 86px;
-  height: 86px;
-  transform:
-    translate(-50%, -50%);
-  z-index: 40;
-  transition: opacity 0.8s ease;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 86px;
+    height: 86px;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 40;
+
+    transition:
+        opacity 0.8s ease;
 }
 
 .adorno-centro {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 72px;
-  height: 72px;
-  transform:
-    translate(-50%, -50%);
-  border-radius: 50%;
-  background: #080808;
-  border: 2px solid #d8d8d8;
-  box-shadow:
-    0 0 16px rgba(255, 255, 255, 0.35),
-    inset 0 0 18px rgba(255, 255, 255, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 72px;
+    height: 72px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #080808;
+
+    border:
+        2px solid
+        #d8d8d8;
+
+    box-shadow:
+        0 0 16px
+        rgba(255, 255, 255, 0.35),
+
+        inset 0 0 18px
+        rgba(255, 255, 255, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .rombo-centro {
-  width: 24px;
-  height: 24px;
-  border: 2px solid #e2e2e2;
-  transform: rotate(45deg);
-  box-shadow:
-    0 0 8px
-    rgba(255, 255, 255, 0.35);
+
+    width: 24px;
+    height: 24px;
+
+    border:
+        2px solid
+        #e2e2e2;
+
+    transform:
+        rotate(45deg);
+
+    box-shadow:
+        0 0 8px
+        rgba(255, 255, 255, 0.35);
 }
 
 .intro.abriendo .centro-porton {
-  opacity: 0;
+
+    opacity: 0;
 }
+
 
 /* =========================
    PARTÍCULAS
 ========================= */
 
 .particulas {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 70;
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 70;
 }
 
 .brillito {
-  position: fixed;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow:
-    0 0 8px
-    rgba(255, 255, 255, 0.9);
-  pointer-events: none;
-  animation:
-    desaparecer-brillo
-    ease-out
-    forwards;
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 8px
+        rgba(255, 255, 255, 0.9);
+
+    pointer-events: none;
+
+    animation:
+        desaparecer-brillo
+        ease-out
+        forwards;
 }
 
 @keyframes desaparecer-brillo {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
 
-  20% {
-    opacity: 1;
-    transform: scale(1);
-  }
+    0% {
 
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
+        opacity: 0;
+
+        transform:
+            scale(0.3);
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(0);
+    }
 }
+
 
 /* =========================
    MENSAJE
 ========================= */
 
 .mensaje-intro {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(90vw, 760px);
-  transform:
-    translate(-50%, -50%)
-    translateY(30px);
-  text-align: center;
-  z-index: 80;
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    opacity 1.5s ease,
-    transform 1.5s ease;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(90vw, 760px);
+
+    transform:
+        translate(-50%, -50%)
+        translateY(30px);
+
+    text-align: center;
+
+    z-index: 80;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 1.5s ease,
+
+        transform 1.5s ease;
 }
 
 .mensaje-linea {
-  color: #f4f4f4;
-  font-size: clamp(23px, 3.3vw, 38px);
-  line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-shadow:
-    0 0 18px
-    rgba(255, 255, 255, 0.18);
+
+    color: #f4f4f4;
+
+    font-size:
+        clamp(23px, 3.3vw, 38px);
+
+    line-height: 1.5;
+
+    font-weight: 400;
+
+    letter-spacing:
+        0.04em;
+
+    text-shadow:
+        0 0 18px
+        rgba(255, 255, 255, 0.18);
 }
 
 .intro.mostrar-mensaje .mensaje-intro {
-  opacity: 1;
-  transform:
-    translate(-50%, -50%)
-    translateY(0);
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        translateY(0);
 }
 
 .intro.ocultar-mensaje .mensaje-intro {
-  opacity: 0;
-  transform:
-    translate(-50%, -50%)
-    translateY(-20px);
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        translateY(-20px);
 }
+
 
 /* =========================
    MARIPOSA INTRO
 ========================= */
 
 .mariposa-vuelo {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 90px;
-  height: 90px;
-  transform:
-    translate(-50%, -50%);
-  z-index: 100;
-  pointer-events: none;
-  will-change: left, top, transform;
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    will-change:
+        left,
+        top,
+        transform;
 }
 
 .mariposa-flotante {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .mariposa-intro {
-  width: clamp(55px, 9vw, 105px);
-  height: auto;
-  object-fit: contain;
-  filter:
-    drop-shadow(
-      0 0 10px
-      rgba(255, 255, 255, 0.5)
-    );
-  display: block;
-  pointer-events: none;
-  opacity: 0.999;
+
+    width:
+        clamp(55px, 9vw, 105px);
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(255, 255, 255, 0.5)
+        );
+
+    display: block;
+
+    pointer-events: none;
+
+    opacity: 0.999;
 }
+
 
 /* =========================
    TRANSICIÓN FINAL
 ========================= */
 
 .intro.transicion-final {
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
-  transition: opacity 1.2s ease;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    transition:
+        opacity 1.2s ease;
 }
+
 
 /* =========================
    CUENTA REGRESIVA
 ========================= */
 
 .temporizador {
-  width: min(100%, 520px);
-  margin-top: 55px;
-  text-align: center;
+
+    width:
+        min(100%, 520px);
+
+    margin-top: 55px;
+
+    text-align: center;
 }
 
 .temporizador-titulo {
-  margin-bottom: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  letter-spacing: 0.30em;
-  color: var(--dorado);
-  text-decoration: underline;
-  text-decoration-color: var(--dorado);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 7px;
-  font-weight: 500;
+
+    margin-bottom: 22px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing:
+        0.30em;
+
+    color:
+        var(--dorado);
+
+    text-decoration:
+        underline;
+
+    text-decoration-color:
+        var(--dorado);
+
+    text-decoration-thickness:
+        1px;
+
+    text-underline-offset:
+        7px;
+
+    font-weight: 500;
 }
 
 .temporizador-valores {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 12px;
 }
 
 .temporizador-unidad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 62px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 62px;
 }
 
 .temporizador-numero {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(30px, 6.5vw, 46px);
-  font-weight: 300;
-  color: var(--texto-secundario);
-  letter-spacing: 0.05em;
-  line-height: 1;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(30px, 6.5vw, 46px);
+
+    font-weight: 300;
+
+    color:
+        var(--texto-secundario);
+
+    letter-spacing:
+        0.05em;
+
+    line-height: 1;
 }
 
 .temporizador-label {
-  margin-top: 9px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.25em;
-  color: var(--texto-secundario);
+
+    margin-top: 9px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing:
+        0.25em;
+
+    color:
+        var(--texto-secundario);
 }
+
 
 /* =========================
    BOTÓN CONFIRMAR
 ========================= */
 
 .boton-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 220px;
-  padding: 13px 25px;
-  border: 1px solid var(--dorado);
-  background: transparent;
-  color: var(--dorado-claro);
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  font-weight: 500;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 220px;
+
+    padding:
+        13px 25px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    background: transparent;
+
+    color:
+        var(--dorado-claro);
+
+    text-decoration:
+        none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing:
+        0.18em;
+
+    font-weight: 500;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .boton-whatsapp:hover {
-  background: var(--dorado-claro);
-  color: #18212b;
-  border-color: var(--dorado-claro);
+
+    background:
+        var(--dorado-claro);
+
+    color: #18212b;
+
+    border-color:
+        var(--dorado-claro);
 }
+
 
 /* =========================
    BOTÓN UBICACIÓN
 ========================= */
 
 .boton-ubicacion {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 190px;
-  padding: 13px 25px;
-  border: 1px solid var(--dorado);
-  background: transparent;
-  color: var(--dorado-claro);
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  font-weight: 500;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding:
+        13px 25px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    background: transparent;
+
+    color:
+        var(--dorado-claro);
+
+    text-decoration:
+        none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing:
+        0.18em;
+
+    font-weight: 500;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .boton-ubicacion:hover {
-  background: var(--dorado-claro);
-  color: #18212b;
-  border-color: var(--dorado-claro);
+
+    background:
+        var(--dorado-claro);
+
+    color: #18212b;
+
+    border-color:
+        var(--dorado-claro);
 }
+
 
 /* =========================
    CONFIRMAR ASISTENCIA
 ========================= */
 
 .confirmar-asistencia {
-  width: min(100%, 470px);
-  margin-top: 55px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+    width:
+        min(100%, 470px);
+
+    margin-top: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
 }
+
 
 /* =========================
    ALIAS
 ========================= */
 
 .datos-regalo {
-  width: min(100%, 470px);
-  margin-top: 55px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+    width:
+        min(100%, 470px);
+
+    margin-top: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
 }
 
 .datos-regalo-titulo {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.42em;
-  color: var(--dorado);
-  margin-bottom: 18px;
-  text-decoration-line: underline;
-  text-decoration-color: var(--dorado);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing:
+        0.42em;
+
+    color:
+        var(--dorado);
+
+    margin-bottom: 18px;
+
+    text-decoration-line:
+        underline;
+
+    text-decoration-color:
+        var(--dorado);
+
+    text-decoration-thickness:
+        1px;
+
+    text-underline-offset:
+        7px;
 }
 
 .datos-regalo-alias {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(18px, 3.2vw, 23px);
-  letter-spacing: 0.18em;
-  color: var(--texto-secundario);
-  margin-bottom: 18px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(18px, 3.2vw, 23px);
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--texto-secundario);
+
+    margin-bottom: 18px;
 }
+
 
 /* =========================
    BOTÓN COPIAR
 ========================= */
 
 .boton-copiar {
-  min-width: 180px;
-  padding: 12px 24px;
-  border: 1px solid var(--dorado);
-  background: transparent;
-  color: var(--dorado-claro);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.25em;
-  cursor: pointer;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+
+    min-width: 180px;
+
+    padding:
+        12px 24px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    background: transparent;
+
+    color:
+        var(--dorado-claro);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing:
+        0.25em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .boton-copiar:hover {
-  background: var(--dorado-claro);
-  color: #18212b;
-  border-color: var(--dorado-claro);
+
+    background:
+        var(--dorado-claro);
+
+    color: #18212b;
+
+    border-color:
+        var(--dorado-claro);
 }
+
 
 /* =========================
    GALERÍA · MOMENTOS
 ========================= */
 
 .galeria-momentos {
-  width: 100%;
-  margin-top: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .galeria-etiqueta {
-  position: relative;
-  margin-bottom: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  letter-spacing: 0.30em;
-  color: var(--dorado);
-  text-decoration: none;
-  font-weight: 500;
+
+    position: relative;
+
+    margin-bottom: 30px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing:
+        0.30em;
+
+    color:
+        var(--dorado);
+
+    text-decoration:
+        none;
+
+    font-weight: 500;
 }
 
 .galeria-etiqueta::after {
-  content: "";
-  display: block;
-  width: 35px;
-  height: 1px;
-  margin: 14px auto 0;
-  background:
-    linear-gradient(
-      to right,
-      transparent,
-      var(--dorado),
-      transparent
-    );
+
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 1px;
+
+    margin:
+        14px auto 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--dorado),
+            transparent
+        );
 }
+
 
 /* =========================
    CARRUSEL
 ========================= */
 
 .galeria-carrusel {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  touch-action: pan-x;
-  overscroll-behavior-x: contain;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type:
+        x mandatory;
+
+    -webkit-overflow-scrolling:
+        touch;
+
+    scrollbar-width: none;
+
+    /*
+       IMPORTANTE:
+       Antes estaba solamente en pan-x.
+       Eso bloqueaba el scroll vertical
+       del sitio al tocar la foto en iPhone.
+    */
+    touch-action:
+        pan-x pan-y;
+
+    overscroll-behavior-x:
+        contain;
 }
 
 .galeria-carrusel:focus {
-  outline: none;
+
+    outline: none;
 }
 
 .galeria-indicadores {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin-top: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 16px;
 }
 
 .indicador-foto {
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--dorado);
-  opacity: 0.65;
-  transition:
-    width 0.35s ease,
-    opacity 0.35s ease,
-    background 0.35s ease;
+
+    display: block;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        var(--dorado);
+
+    opacity: 0.65;
+
+    transition:
+        width 0.35s ease,
+        opacity 0.35s ease,
+        background 0.35s ease;
 }
 
 .indicador-foto.indicador-activo {
-  width: 7px;
-  height: 7px;
-  background: var(--dorado-claro);
-  opacity: 1;
+
+    width: 7px;
+    height: 7px;
+
+    background:
+        var(--dorado-claro);
+
+    opacity: 1;
 }
 
 .galeria-carrusel::-webkit-scrollbar {
-  display: none;
+
+    display: none;
 }
+
 
 /* =========================
    PISTA
 ========================= */
 
 .galeria-pista {
-  display: flex;
-  gap: 18px;
-  width: max-content;
-  padding: 4px 6vw 12px;
+
+    display: flex;
+
+    gap: 18px;
+
+    width: max-content;
+
+    padding:
+        4px 6vw 12px;
 }
+
 
 /* =========================
    FOTOS PREMIUM
 ========================= */
 
 .galeria-pista img {
-  display: block;
-  width: min(78vw, 430px);
-  height: min(105vw, 570px);
-  object-fit: cover;
-  flex-shrink: 0;
-  scroll-snap-align: center;
-  border: 1px solid rgba(220, 225, 230, 0.6);
-  border-radius: 14px;
-  background: #1c2530;
-  box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 0 30px rgba(255, 255, 255, 0.04);
-  transition:
-    transform 0.5s ease,
-    border-color 0.5s ease,
-    box-shadow 0.5s ease;
+
+    display: block;
+
+    width:
+        min(78vw, 430px);
+
+    height:
+        min(105vw, 570px);
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    scroll-snap-align:
+        center;
+
+    border:
+        1px solid
+        rgba(220, 225, 230, 0.6);
+
+    border-radius: 14px;
+
+    background:
+        #1c2530;
+
+    box-shadow:
+
+        0 18px 50px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 0 1px
+        rgba(255, 255, 255, 0.04),
+
+        0 0 30px
+        rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
 }
+
 
 /* =========================
    EFECTO PREMIUM EN PC
@@ -1205,14 +2020,25 @@ body.mariposas-evento::after {
 
 @media (hover: hover) and (pointer: fine) {
 
-  .galeria-pista img:hover {
-    transform: scale(1.015);
-    border-color: rgba(245, 248, 250, 0.9);
-    box-shadow:
-      0 22px 60px rgba(0, 0, 0, 0.65),
-      0 0 35px rgba(255, 255, 255, 0.08);
-  }
+    .galeria-pista img:hover {
+
+        transform:
+            scale(1.015);
+
+        border-color:
+            rgba(245, 248, 250, 0.9);
+
+        box-shadow:
+
+            0 22px 60px
+            rgba(0, 0, 0, 0.65),
+
+            0 0 35px
+            rgba(255, 255, 255, 0.08);
+    }
+
 }
+
 
 /* =========================
    MOBILE
@@ -1220,293 +2046,472 @@ body.mariposas-evento::after {
 
 @media (max-width: 600px) {
 
-  .pagina-invitacion::before {
-    background-position:
-      var(--fondo-posicion-mobile);
-  }
+    .pagina-invitacion::before {
 
-  body::before,
-  body::after {
-    top: 18px;
-    width: 38px;
-    height: 38px;
-    opacity: 0.68;
-  }
+        background-position:
+            var(--fondo-posicion-mobile);
+    }
 
-  body::before {
-    left: 12px;
-  }
 
-  body::after {
-    right: 12px;
-  }
+    body::before,
+    body::after {
 
-  .porton {
-    width: 100vw;
-    height: auto;
-    aspect-ratio: 1000 / 900;
-  }
+        top: 18px;
 
-  .mensaje-intro {
-    width: 88vw;
-  }
+        width: 38px;
+        height: 38px;
 
-  .mensaje-linea {
-    font-size: 22px;
-    line-height: 1.5;
-  }
+        opacity: 0.68;
+    }
 
-  .centro-porton {
-    width: 74px;
-    height: 74px;
-  }
 
-  .adorno-centro {
-    width: 62px;
-    height: 62px;
-  }
+    body::before {
+        left: 12px;
+    }
 
-  .rombo-centro {
-    width: 21px;
-    height: 21px;
-  }
 
-  .mariposa-vuelo {
-    width: 90px;
-    height: 90px;
-  }
+    body::after {
+        right: 12px;
+    }
 
-  .mariposa-intro {
-    width: 58px;
-  }
 
-  .brillito {
-    box-shadow:
-      0 0 5px
-      rgba(255, 255, 255, 0.75);
-  }
+    .porton {
 
-  /* =========================
-     HERO MOBILE
-  ========================= */
+        width: 100vw;
 
-  .hero-mariposa {
-    width: 90vw;
-  }
+        height: auto;
 
-  .hero-contenido h1 {
-    font-size:
-      clamp(62px, 19vw, 105px);
-  }
+        aspect-ratio:
+            1000 / 900;
+    }
 
-  .hero-superior {
-    font-size: 25px;
-    letter-spacing: 0.36em;
-  }
 
-  .hero-fecha {
-    font-size: 17px;
-    letter-spacing: 0.22em;
-    text-decoration: none;
-  }
+    .mensaje-intro {
 
-  /* =========================
-     EVENTO MOBILE
-  ========================= */
+        width: 88vw;
+    }
 
-  .evento-contenido {
-    width: 94vw;
-    padding: 11vh 15px 60px;
-  }
 
-  .evento-etiqueta {
-    font-size: 20px;
-    letter-spacing: 0.28em;
-    text-decoration: none;
-  }
+    .mensaje-linea {
 
-  .evento-titulo {
-    font-size: 46px;
-  }
+        font-size: 22px;
 
-  .evento-linea {
-    margin: 28px 0 25px;
-  }
+        line-height: 1.5;
+    }
 
-  .evento-fecha {
-    font-size: 21px;
-    gap: 9px;
-    letter-spacing: 0.10em;
-    text-decoration: none;
-  }
 
-  .evento-separador {
-    font-size: 16px;
-  }
+    .centro-porton {
 
-  .evento-dia-semana {
-    font-size: 20px;
-    letter-spacing: 0.30em;
-    text-decoration: none;
-  }
+        width: 74px;
+        height: 74px;
+    }
 
-  .evento-detalle {
-    margin-top: 42px;
-    gap: 11px;
-  }
 
-  .detalle-etiqueta {
-    font-size: 20px;
-    letter-spacing: 0.24em;
-    text-underline-offset: 6px;
-  }
+    .adorno-centro {
 
-  .detalle-valor {
-    font-size: 14px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-  }
+        width: 62px;
+        height: 62px;
+    }
 
-  .evento-dress {
-    margin-top: 30px;
-  }
 
-  .evento-decoracion {
-    margin-top: 40px;
-  }
+    .rombo-centro {
 
-  /* =========================
-     CUENTA REGRESIVA MOBILE
-  ========================= */
+        width: 21px;
+        height: 21px;
+    }
 
-  .temporizador {
-    margin-top: 46px;
-  }
 
-  .temporizador-titulo {
-    font-size: 20px;
-    letter-spacing: 0.26em;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-  }
+    .mariposa-vuelo {
 
-  .temporizador-valores {
-    gap: 5px;
-  }
+        width: 90px;
+        height: 90px;
+    }
 
-  .temporizador-unidad {
-    min-width: 52px;
-  }
 
-  .temporizador-numero {
-    font-size: 30px;
-  }
+    .mariposa-intro {
 
-  .temporizador-label {
-    font-size: 9px;
-  }
+        width: 58px;
+    }
 
-  .temporizador-separador {
-    font-size: 19px;
-    margin-top: 3px;
-  }
 
-  /* =========================
-     UBICACIÓN MOBILE
-  ========================= */
+    .brillito {
 
-  .boton-ubicacion {
-    min-width: 165px;
-    padding: 11px 20px;
-    font-size: 10px;
-  }
+        box-shadow:
+            0 0 5px
+            rgba(255, 255, 255, 0.75);
+    }
 
-  /* =========================
-     ALIAS MOBILE
-  ========================= */
 
-  .datos-regalo {
-    margin-top: 45px;
-  }
+    /* =========================
+       HERO MOBILE
+    ========================= */
 
-  .datos-regalo-titulo {
-    font-size: 12px;
-    letter-spacing: 0.34em;
-    text-underline-offset: 6px;
-  }
+    .hero-mariposa {
 
-  .datos-regalo-alias {
-    font-size: 18px;
-  }
+        width: 90vw;
+    }
 
-  .boton-copiar {
-    min-width: 165px;
-    padding: 11px 20px;
-    font-size: 10px;
-  }
 
-  /* =========================
-     BOTÓN CONFIRMAR MOBILE
-  ========================= */
+    .hero-contenido h1 {
 
-  .confirmar-asistencia {
-    margin-top: 45px;
-  }
+        font-size:
+            clamp(
+                62px,
+                19vw,
+                105px
+            );
+    }
 
-  .boton-whatsapp {
-    min-width: 210px;
-    padding: 12px 20px;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-  }
 
-  /* =========================
-     GALERÍA MOBILE
-  ========================= */
+    .hero-superior {
 
-  .galeria-momentos {
-    margin-top: 56px;
-  }
+        font-size: 25px;
 
-  .galeria-etiqueta {
-    margin-bottom: 25px;
-    font-size: 20px;
-    letter-spacing: 0.27em;
-    text-decoration: none;
-  }
+        letter-spacing:
+            0.36em;
+    }
 
-  .galeria-etiqueta::after {
-    width: 28px;
-    margin-top: 12px;
-  }
 
-  .galeria-pista {
-    gap: 13px;
-    padding: 4px 7vw 12px;
-  }
+    .hero-fecha {
 
-  .galeria-pista img {
-    width: 78vw;
-    height: 105vw;
-    max-height: 520px;
-    border-radius: 12px;
-    box-shadow:
-      0 16px 42px rgba(0, 0, 0, 0.6),
-      0 0 25px rgba(255, 255, 255, 0.04);
-  }
+        font-size: 17px;
 
-  .galeria-indicadores {
-    gap: 6px;
-    margin-top: 13px;
-  }
+        letter-spacing:
+            0.22em;
 
-  .indicador-foto {
-    width: 4px;
-    height: 4px;
-  }
+        text-decoration:
+            none;
+    }
 
-  .indicador-foto.indicador-activo {
-    width: 6px;
-    height: 6px;
-  }
+
+    /* =========================
+       EVENTO MOBILE
+    ========================= */
+
+    .evento-contenido {
+
+        width: 94vw;
+
+        padding:
+            11vh 15px 60px;
+    }
+
+
+    .evento-etiqueta {
+
+        font-size: 20px;
+
+        letter-spacing:
+            0.28em;
+
+        text-decoration:
+            none;
+    }
+
+
+    .evento-titulo {
+
+        font-size: 46px;
+    }
+
+
+    .evento-linea {
+
+        margin:
+            28px 0 25px;
+    }
+
+
+    .evento-fecha {
+
+        font-size: 21px;
+
+        gap: 9px;
+
+        letter-spacing:
+            0.10em;
+
+        text-decoration:
+            none;
+    }
+
+
+    .evento-separador {
+
+        font-size: 16px;
+    }
+
+
+    .evento-dia-semana {
+
+        font-size: 20px;
+
+        letter-spacing:
+            0.30em;
+
+        text-decoration:
+            none;
+    }
+
+
+    .evento-detalle {
+
+        margin-top: 42px;
+
+        gap: 11px;
+    }
+
+
+    .detalle-etiqueta {
+
+        font-size: 20px;
+
+        letter-spacing:
+            0.24em;
+
+        text-underline-offset:
+            6px;
+    }
+
+
+    .detalle-valor {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        letter-spacing:
+            0.06em;
+    }
+
+
+    .evento-dress {
+
+        margin-top: 30px;
+    }
+
+
+    .evento-decoracion {
+
+        margin-top: 40px;
+    }
+
+
+    /* =========================
+       CUENTA REGRESIVA MOBILE
+    ========================= */
+
+    .temporizador {
+
+        margin-top: 46px;
+    }
+
+
+    .temporizador-titulo {
+
+        font-size: 20px;
+
+        letter-spacing:
+            0.26em;
+
+        text-decoration:
+            underline;
+
+        text-underline-offset:
+            6px;
+    }
+
+
+    .temporizador-valores {
+
+        gap: 5px;
+    }
+
+
+    .temporizador-unidad {
+
+        min-width: 52px;
+    }
+
+
+    .temporizador-numero {
+
+        font-size: 30px;
+    }
+
+
+    .temporizador-label {
+
+        font-size: 9px;
+    }
+
+
+    .temporizador-separador {
+
+        font-size: 19px;
+
+        margin-top: 3px;
+    }
+
+
+    /* =========================
+       UBICACIÓN MOBILE
+    ========================= */
+
+    .boton-ubicacion {
+
+        min-width: 165px;
+
+        padding:
+            11px 20px;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       ALIAS MOBILE
+    ========================= */
+
+    .datos-regalo {
+
+        margin-top: 45px;
+    }
+
+
+    .datos-regalo-titulo {
+
+        font-size: 12px;
+
+        letter-spacing:
+            0.34em;
+
+        text-underline-offset:
+            6px;
+    }
+
+
+    .datos-regalo-alias {
+
+        font-size: 18px;
+    }
+
+
+    .boton-copiar {
+
+        min-width: 165px;
+
+        padding:
+            11px 20px;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       BOTÓN CONFIRMAR MOBILE
+    ========================= */
+
+    .confirmar-asistencia {
+
+        margin-top: 45px;
+    }
+
+
+    .boton-whatsapp {
+
+        min-width: 210px;
+
+        padding:
+            12px 20px;
+
+        font-size: 11px;
+
+        letter-spacing:
+            0.16em;
+    }
+
+
+    /* =========================
+       GALERÍA MOBILE
+    ========================= */
+
+    .galeria-momentos {
+
+        margin-top: 56px;
+    }
+
+
+    .galeria-etiqueta {
+
+        margin-bottom: 25px;
+
+        font-size: 20px;
+
+        letter-spacing:
+            0.27em;
+
+        text-decoration:
+            none;
+    }
+
+
+    .galeria-etiqueta::after {
+
+        width: 28px;
+
+        margin-top: 12px;
+    }
+
+
+    .galeria-pista {
+
+        gap: 13px;
+
+        padding:
+            4px 7vw 12px;
+    }
+
+
+    .galeria-pista img {
+
+        width: 78vw;
+
+        height: 105vw;
+
+        max-height: 520px;
+
+        border-radius: 12px;
+
+        box-shadow:
+
+            0 16px 42px
+            rgba(0, 0, 0, 0.6),
+
+            0 0 25px
+            rgba(255, 255, 255, 0.04);
+    }
+
+
+    .galeria-indicadores {
+
+        gap: 6px;
+
+        margin-top: 13px;
+    }
+
+
+    .indicador-foto {
+
+        width: 4px;
+        height: 4px;
+    }
+
+
+    .indicador-foto.indicador-activo {
+
+        width: 6px;
+        height: 6px;
+    }
+
 }

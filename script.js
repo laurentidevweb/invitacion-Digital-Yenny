@@ -129,12 +129,10 @@ function crearIntro() {
             <section class="hero-invitacion">
 
                 <div class="hero-mariposa">
-
                     <img
                         src="img/mariposa.png"
                         alt=""
                     >
-
                 </div>
 
 
@@ -162,30 +160,24 @@ function crearIntro() {
             <section class="seccion-evento">
 
                 <div class="evento-fondo-mariposa">
-
                     <img
                         src="img/mariposa.png"
                         alt=""
                     >
-
                 </div>
 
 
                 <div class="evento-contenido">
 
 
-                    <!-- =========================
-                         UNA NOCHE
-                    ========================== -->
+                    <!-- UNA NOCHE -->
 
                     <p class="evento-etiqueta reveal-evento">
                         UNA NOCHE
                     </p>
 
 
-                    <!-- =========================
-                         TÍTULO
-                    ========================== -->
+                    <!-- TÍTULO -->
 
                     <h2 class="evento-titulo reveal-evento">
                         para recordar
@@ -195,9 +187,7 @@ function crearIntro() {
                     <div class="evento-linea reveal-evento"></div>
 
 
-                    <!-- =========================
-                         FECHA
-                    ========================== -->
+                    <!-- FECHA -->
 
                     <div class="evento-fecha reveal-evento">
 
@@ -224,18 +214,14 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         DÍA
-                    ========================== -->
+                    <!-- DÍA -->
 
                     <p class="evento-dia-semana reveal-evento">
                         SÁBADO
                     </p>
 
 
-                    <!-- =========================
-                         LUGAR
-                    ========================== -->
+                    <!-- LUGAR -->
 
                     <div class="evento-detalle reveal-evento">
 
@@ -263,9 +249,7 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         DRESS CODE
-                    ========================== -->
+                    <!-- DRESS CODE -->
 
                     <div
                         class="evento-detalle evento-dress reveal-evento"
@@ -282,9 +266,7 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         HORA
-                    ========================== -->
+                    <!-- HORA -->
 
                     <div class="evento-detalle reveal-evento">
 
@@ -299,9 +281,7 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         CUENTA REGRESIVA
-                    ========================== -->
+                    <!-- CUENTA REGRESIVA -->
 
                     <div class="temporizador reveal-evento">
 
@@ -391,16 +371,12 @@ function crearIntro() {
 
                             </div>
 
-
                         </div>
 
                     </div>
 
 
-                    <!-- =========================
-                         CONFIRMAR ASISTENCIA
-                         ANTES DEL ALIAS
-                    ========================== -->
+                    <!-- CONFIRMAR ASISTENCIA -->
 
                     <div class="confirmar-asistencia reveal-evento">
 
@@ -417,9 +393,7 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         ALIAS
-                    ========================== -->
+                    <!-- ALIAS -->
 
                     <div class="datos-regalo reveal-evento">
 
@@ -445,9 +419,7 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         GALERÍA
-                    ========================== -->
+                    <!-- GALERÍA -->
 
                     <div class="galeria-momentos reveal-evento">
 
@@ -523,16 +495,12 @@ function crearIntro() {
                     </div>
 
 
-                    <!-- =========================
-                         DECORACIÓN FINAL
-                    ========================== -->
+                    <!-- DECORACIÓN FINAL -->
 
                     <div class="evento-decoracion reveal-evento">
 
                         <span></span>
-
                         <i></i>
-
                         <span></span>
 
                     </div>
@@ -545,9 +513,7 @@ function crearIntro() {
         </main>
 
 
-        <!-- =========================
-             INTRO
-        ========================== -->
+        <!-- INTRO -->
 
         <section
             class="intro"
@@ -557,9 +523,7 @@ function crearIntro() {
             <div class="luz-central"></div>
 
 
-            <!-- =========================
-                 PORTÓN
-            ========================== -->
+            <!-- PORTÓN -->
 
             <div class="porton">
 
@@ -596,68 +560,15 @@ function crearIntro() {
 
                     <g class="barrotes">
 
-                        <line
-                            x1="45"
-                            y1="215"
-                            x2="45"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="95"
-                            y1="180"
-                            x2="95"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="145"
-                            y1="150"
-                            x2="145"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="195"
-                            y1="120"
-                            x2="195"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="245"
-                            y1="100"
-                            x2="245"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="295"
-                            y1="90"
-                            x2="295"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="345"
-                            y1="95"
-                            x2="345"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="395"
-                            y1="115"
-                            x2="395"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="445"
-                            y1="155"
-                            x2="445"
-                            y2="850"
-                        />
+                        <line x1="45" y1="215" x2="45" y2="850" />
+                        <line x1="95" y1="180" x2="95" y2="850" />
+                        <line x1="145" y1="150" x2="145" y2="850" />
+                        <line x1="195" y1="120" x2="195" y2="850" />
+                        <line x1="245" y1="100" x2="245" y2="850" />
+                        <line x1="295" y1="90" x2="295" y2="850" />
+                        <line x1="345" y1="95" x2="345" y2="850" />
+                        <line x1="395" y1="115" x2="395" y2="850" />
+                        <line x1="445" y1="155" x2="445" y2="850" />
 
                     </g>
 
@@ -689,59 +600,15 @@ function crearIntro() {
 
                     <g class="decoracion">
 
-                        <circle
-                            cx="45"
-                            cy="215"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="95"
-                            cy="180"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="145"
-                            cy="150"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="195"
-                            cy="120"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="245"
-                            cy="100"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="295"
-                            cy="90"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="345"
-                            cy="95"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="395"
-                            cy="115"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="445"
-                            cy="155"
-                            r="8"
-                        />
+                        <circle cx="45" cy="215" r="8" />
+                        <circle cx="95" cy="180" r="8" />
+                        <circle cx="145" cy="150" r="8" />
+                        <circle cx="195" cy="120" r="8" />
+                        <circle cx="245" cy="100" r="8" />
+                        <circle cx="295" cy="90" r="8" />
+                        <circle cx="345" cy="95" r="8" />
+                        <circle cx="395" cy="115" r="8" />
+                        <circle cx="445" cy="155" r="8" />
 
                     </g>
 
@@ -780,68 +647,15 @@ function crearIntro() {
 
                     <g class="barrotes">
 
-                        <line
-                            x1="55"
-                            y1="155"
-                            x2="55"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="105"
-                            y1="115"
-                            x2="105"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="155"
-                            y1="95"
-                            x2="155"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="205"
-                            y1="90"
-                            x2="205"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="255"
-                            y1="100"
-                            x2="255"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="305"
-                            y1="120"
-                            x2="305"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="355"
-                            y1="150"
-                            x2="355"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="405"
-                            y1="180"
-                            x2="405"
-                            y2="850"
-                        />
-
-                        <line
-                            x1="455"
-                            y1="215"
-                            x2="455"
-                            y2="850"
-                        />
+                        <line x1="55" y1="155" x2="55" y2="850" />
+                        <line x1="105" y1="115" x2="105" y2="850" />
+                        <line x1="155" y1="95" x2="155" y2="850" />
+                        <line x1="205" y1="90" x2="205" y2="850" />
+                        <line x1="255" y1="100" x2="255" y2="850" />
+                        <line x1="305" y1="120" x2="305" y2="850" />
+                        <line x1="355" y1="150" x2="355" y2="850" />
+                        <line x1="405" y1="180" x2="405" y2="850" />
+                        <line x1="455" y1="215" x2="455" y2="850" />
 
                     </g>
 
@@ -873,59 +687,15 @@ function crearIntro() {
 
                     <g class="decoracion">
 
-                        <circle
-                            cx="55"
-                            cy="155"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="105"
-                            cy="115"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="155"
-                            cy="95"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="205"
-                            cy="90"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="255"
-                            cy="100"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="305"
-                            cy="120"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="355"
-                            cy="150"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="405"
-                            cy="180"
-                            r="8"
-                        />
-
-                        <circle
-                            cx="455"
-                            cy="215"
-                            r="8"
-                        />
+                        <circle cx="55" cy="155" r="8" />
+                        <circle cx="105" cy="115" r="8" />
+                        <circle cx="155" cy="95" r="8" />
+                        <circle cx="205" cy="90" r="8" />
+                        <circle cx="255" cy="100" r="8" />
+                        <circle cx="305" cy="120" r="8" />
+                        <circle cx="355" cy="150" r="8" />
+                        <circle cx="405" cy="180" r="8" />
+                        <circle cx="455" cy="215" r="8" />
 
                     </g>
 
@@ -934,24 +704,18 @@ function crearIntro() {
             </div>
 
 
-            <!-- =========================
-                 CENTRO PORTÓN
-            ========================== -->
+            <!-- CENTRO PORTÓN -->
 
             <div class="centro-porton">
 
                 <div class="adorno-centro">
-
                     <div class="rombo-centro"></div>
-
                 </div>
 
             </div>
 
 
-            <!-- =========================
-                 PARTÍCULAS
-            ========================== -->
+            <!-- PARTÍCULAS -->
 
             <div
                 class="particulas"
@@ -959,9 +723,7 @@ function crearIntro() {
             ></div>
 
 
-            <!-- =========================
-                 MENSAJE MARIPOSA
-            ========================== -->
+            <!-- MENSAJE MARIPOSA -->
 
             <div
                 class="mensaje-mariposa"
@@ -979,9 +741,7 @@ function crearIntro() {
             </div>
 
 
-            <!-- =========================
-                 MENSAJE INTRO
-            ========================== -->
+            <!-- MENSAJE INTRO -->
 
             <div class="mensaje-intro">
 
@@ -996,9 +756,7 @@ function crearIntro() {
             </div>
 
 
-            <!-- =========================
-                 MARIPOSA DE VUELO
-            ========================== -->
+            <!-- MARIPOSA DE VUELO -->
 
             <div
                 class="mariposa-vuelo"
@@ -1021,9 +779,7 @@ function crearIntro() {
         </section>
 
 
-        <!-- =========================
-             MÚSICA
-        ========================== -->
+        <!-- MÚSICA -->
 
         <audio
             id="musica-fondo"
@@ -1106,7 +862,6 @@ function reproducirMusica() {
     }
 
     musicaFondo.currentTime = 0;
-
     musicaFondo.volume = 0.01;
 
     const reproduccion =
@@ -1325,7 +1080,6 @@ function actualizarTemporizador() {
             "0"
         );
 
-
     horas.textContent =
         String(
             cantidadHoras
@@ -1334,7 +1088,6 @@ function actualizarTemporizador() {
             "0"
         );
 
-
     minutos.textContent =
         String(
             cantidadMinutos
@@ -1342,7 +1095,6 @@ function actualizarTemporizador() {
             2,
             "0"
         );
-
 
     segundos.textContent =
         String(
@@ -1384,7 +1136,6 @@ botonCopiar.addEventListener(
                 evento.alias
             );
 
-
             botonCopiar.textContent =
                 "ALIAS COPIADO";
 
@@ -1398,7 +1149,6 @@ botonCopiar.addEventListener(
                 },
                 2000
             );
-
 
         } catch (error) {
 
@@ -1704,7 +1454,6 @@ function avanzarGaleria() {
         galeriaCarrusel.scrollLeft =
             0;
 
-
         return;
 
     }
@@ -1768,7 +1517,6 @@ function reiniciarGaleriaAutomatica() {
     clearTimeout(
         pausaGaleria
     );
-
 
     clearInterval(
         intervaloGaleria
@@ -1939,7 +1687,6 @@ function crearBrillito(
     brillo.style.left =
         `${x + variacionX}px`;
 
-
     brillo.style.top =
         `${y + variacionY}px`;
 
@@ -1952,7 +1699,6 @@ function crearBrillito(
 
     brillo.style.width =
         `${tamanio}px`;
-
 
     brillo.style.height =
         `${tamanio}px`;
@@ -2068,7 +1814,6 @@ function volverAlInicio() {
     document.documentElement.scrollTop =
         0;
 
-
     document.body.scrollTop =
         0;
 
@@ -2109,13 +1854,8 @@ async function iniciarMagia() {
         true;
 
 
-    // La música comienza directamente
-    // desde el toque del usuario.
-
     reproducirMusica();
 
-
-    // Desaparece la indicación.
 
     mensajeMariposa.classList.add(
         "oculto"
@@ -2126,8 +1866,6 @@ async function iniciarMagia() {
         500
     );
 
-
-    // Comienza la apertura del portón.
 
     intro.classList.add(
         "abriendo"
@@ -2228,13 +1966,10 @@ async function iniciarMagia() {
                 }
 
             ],
-
             {
                 duration: 9000,
-
                 easing:
                     "cubic-bezier(0.45, 0, 0.25, 1)",
-
                 fill: "forwards"
             }
         );
@@ -2317,13 +2052,10 @@ async function iniciarMagia() {
                 }
 
             ],
-
             {
                 duration: 3000,
-
                 easing:
                     "cubic-bezier(0.7, 0, 0.12, 1)",
-
                 fill: "forwards"
             }
         );
@@ -2453,7 +2185,7 @@ function esperar(ms) {
 
 
 // =========================
-// TOQUE / CLICK EN LA MARIPOSA
+// TOQUE / CLICK EN MARIPOSA
 // =========================
 
 mariposaVuelo.addEventListener(
