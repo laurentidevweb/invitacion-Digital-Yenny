@@ -1879,10 +1879,10 @@ body.mariposas-evento::after {
   .indicador-foto.indicador-activo {
     width: 6px;
     height: 6px;
+  }
 
-    .pagina-invitacion::before,
-    .pagina-invitacion::after {
-      height: 100vh;
-    }
+  .pagina-invitacion::before,
+  .pagina-invitacion::after {
+    height: 100vh;
   }
 }
