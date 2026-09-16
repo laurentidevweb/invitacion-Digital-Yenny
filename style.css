@@ -180,7 +180,7 @@ body.mariposas-evento::after {
 
 .pagina-invitacion::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-color: #fff;
     background-image: var(--fondo-jenny);
