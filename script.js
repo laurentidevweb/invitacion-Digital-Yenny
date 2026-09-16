@@ -1,20 +1,12 @@
 const evento = {
-
     nombre: "Jenny",
-
     fecha: "10 de Octubre de 2026",
-
     lugar: "Salón Quinta de los Tres Hermanos",
-
     dressCode: "Elegante Sport",
-
     hora: "21:00",
-
-    alias: "yyyyyyyy",
-
+    alias: "jennii.15.mp",
     ubicacion:
         "https://maps.app.goo.gl/YVk8WmXcSQ3Zndjo9",
-
     whatsappMama:
         "5491125370784"
 };
@@ -24,10 +16,9 @@ const app = document.getElementById("app");
 document.body.style.overflow = "hidden";
 
 
-
-// *=========================*
-// *CREAR INTRO + PÁGINA*
-// *=========================*
+// =========================
+// CREAR INTRO + PÁGINA
+// =========================
 
 function crearIntro() {
 
@@ -36,142 +27,93 @@ function crearIntro() {
         <style>
 
             .mensaje-mariposa {
-
                 position: absolute;
-
                 left: 50%;
-
                 top: calc(50% + 105px);
-
                 transform: translateX(-50%);
-
                 z-index: 30;
-
                 display: flex;
-
                 flex-direction: column;
-
                 align-items: center;
-
                 gap: 5px;
-
                 text-align: center;
-
                 pointer-events: none;
-
                 opacity: 1;
-
                 transition:
                     opacity 0.8s ease,
                     transform 0.8s ease;
-
             }
 
             .mensaje-mariposa-principal {
-
                 margin: 0;
-
                 font-family:
                     Arial,
                     sans-serif;
-
                 font-size: 10px;
-
                 font-weight: 500;
-
                 letter-spacing: 3px;
-
                 color: rgba(
                     235,
                     235,
                     235,
                     0.88
                 );
-
                 text-transform: uppercase;
-
                 white-space: nowrap;
-
             }
 
             .mensaje-mariposa-secundario {
-
                 margin: 0;
-
                 font-family:
                     Arial,
                     sans-serif;
-
                 font-size: 8px;
-
                 letter-spacing: 1.5px;
-
                 color: rgba(
                     190,
                     190,
                     190,
                     0.62
                 );
-
             }
 
             .mensaje-mariposa.oculto {
-
                 opacity: 0;
-
                 transform:
                     translateX(-50%)
                     translateY(-10px);
-
             }
 
             .mariposa-vuelo {
-
                 pointer-events: auto;
-
             }
 
             .mariposa-flotante {
-
                 pointer-events: auto;
-
             }
 
             .mariposa-intro {
-
                 cursor: pointer;
-
                 pointer-events: auto;
-
                 -webkit-tap-highlight-color:
                     transparent;
-
                 touch-action: manipulation;
-
             }
 
             @media (max-width: 600px) {
 
                 .mensaje-mariposa {
-
                     top: calc(50% + 92px);
-
                 }
 
                 .mensaje-mariposa-principal {
-
                     font-size: 9px;
-
                     letter-spacing: 2.5px;
-
                 }
 
                 .mensaje-mariposa-secundario {
-
                     font-size: 7px;
-
                     letter-spacing: 1.3px;
-
                 }
 
             }
@@ -194,6 +136,7 @@ function crearIntro() {
                     >
 
                 </div>
+
 
                 <div class="hero-contenido">
 
@@ -230,10 +173,19 @@ function crearIntro() {
 
                 <div class="evento-contenido">
 
+
+                    <!-- =========================
+                         UNA NOCHE
+                    ========================== -->
+
                     <p class="evento-etiqueta reveal-evento">
                         UNA NOCHE
                     </p>
 
+
+                    <!-- =========================
+                         TÍTULO
+                    ========================== -->
 
                     <h2 class="evento-titulo reveal-evento">
                         para recordar
@@ -243,29 +195,47 @@ function crearIntro() {
                     <div class="evento-linea reveal-evento"></div>
 
 
+                    <!-- =========================
+                         FECHA
+                    ========================== -->
+
                     <div class="evento-fecha reveal-evento">
 
-                        <span>10</span>
+                        <span>
+                            10
+                        </span>
 
                         <span class="evento-separador">
                             ·
                         </span>
 
-                        <span>10</span>
+                        <span>
+                            10
+                        </span>
 
                         <span class="evento-separador">
                             ·
                         </span>
 
-                        <span>2026</span>
+                        <span>
+                            2026
+                        </span>
 
                     </div>
 
+
+                    <!-- =========================
+                         DÍA
+                    ========================== -->
 
                     <p class="evento-dia-semana reveal-evento">
                         SÁBADO
                     </p>
 
+
+                    <!-- =========================
+                         LUGAR
+                    ========================== -->
 
                     <div class="evento-detalle reveal-evento">
 
@@ -274,7 +244,11 @@ function crearIntro() {
                         </span>
 
                         <span class="detalle-valor">
-                            SALÓN QUINTA DE LOS TRES HERMANOS
+
+                            <span class="quinta-fucsia">
+                                La Quinta de los Tres Hermanos
+                            </span>
+
                         </span>
 
                         <a
@@ -289,6 +263,10 @@ function crearIntro() {
                     </div>
 
 
+                    <!-- =========================
+                         DRESS CODE
+                    ========================== -->
+
                     <div
                         class="evento-detalle evento-dress reveal-evento"
                     >
@@ -298,24 +276,32 @@ function crearIntro() {
                         </span>
 
                         <span class="detalle-valor">
-                            ELEGANTE SPORT
+                            Elegante Sport
                         </span>
 
                     </div>
 
+
+                    <!-- =========================
+                         HORA
+                    ========================== -->
 
                     <div class="evento-detalle reveal-evento">
 
                         <span class="detalle-etiqueta">
-                            HORA DE LLEGADA
+                            A PARTIR DE LAS
                         </span>
 
                         <span class="detalle-valor">
-                            21:00
+                            21:00 hs
                         </span>
 
                     </div>
 
+
+                    <!-- =========================
+                         CUENTA REGRESIVA
+                    ========================== -->
 
                     <div class="temporizador reveal-evento">
 
@@ -325,6 +311,7 @@ function crearIntro() {
 
 
                         <div class="temporizador-valores">
+
 
                             <div class="temporizador-unidad">
 
@@ -404,10 +391,35 @@ function crearIntro() {
 
                             </div>
 
+
                         </div>
 
                     </div>
 
+
+                    <!-- =========================
+                         CONFIRMAR ASISTENCIA
+                         ANTES DEL ALIAS
+                    ========================== -->
+
+                    <div class="confirmar-asistencia reveal-evento">
+
+                        <a
+                            class="boton-whatsapp"
+                            id="boton-whatsapp"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CONFIRMAR ASISTENCIA
+                        </a>
+
+                    </div>
+
+
+                    <!-- =========================
+                         ALIAS
+                    ========================== -->
 
                     <div class="datos-regalo reveal-evento">
 
@@ -433,28 +445,9 @@ function crearIntro() {
                     </div>
 
 
-                    <div class="confirmar-asistencia reveal-evento">
-
-                        <p class="confirmar-titulo">
-                            POR FAVOR, CONFIRMÁ TU ASISTENCIA
-                        </p>
-
-                        <p class="confirmar-destinatario">
-                            MAMÁ DE JENNY
-                        </p>
-
-                        <a
-                            class="boton-whatsapp"
-                            id="boton-whatsapp"
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            CONFIRMAR POR WHATSAPP
-                        </a>
-
-                    </div>
-
+                    <!-- =========================
+                         GALERÍA
+                    ========================== -->
 
                     <div class="galeria-momentos reveal-evento">
 
@@ -530,6 +523,10 @@ function crearIntro() {
                     </div>
 
 
+                    <!-- =========================
+                         DECORACIÓN FINAL
+                    ========================== -->
+
                     <div class="evento-decoracion reveal-evento">
 
                         <span></span>
@@ -540,12 +537,17 @@ function crearIntro() {
 
                     </div>
 
+
                 </div>
 
             </section>
 
         </main>
 
+
+        <!-- =========================
+             INTRO
+        ========================== -->
 
         <section
             class="intro"
@@ -555,7 +557,14 @@ function crearIntro() {
             <div class="luz-central"></div>
 
 
+            <!-- =========================
+                 PORTÓN
+            ========================== -->
+
             <div class="porton">
+
+
+                <!-- PORTÓN IZQUIERDO -->
 
                 <svg
                     class="hoja hoja-izquierda"
@@ -584,17 +593,71 @@ function crearIntro() {
                         "
                     />
 
+
                     <g class="barrotes">
 
-                        <line x1="45" y1="215" x2="45" y2="850" />
-                        <line x1="95" y1="180" x2="95" y2="850" />
-                        <line x1="145" y1="150" x2="145" y2="850" />
-                        <line x1="195" y1="120" x2="195" y2="850" />
-                        <line x1="245" y1="100" x2="245" y2="850" />
-                        <line x1="295" y1="90" x2="295" y2="850" />
-                        <line x1="345" y1="95" x2="345" y2="850" />
-                        <line x1="395" y1="115" x2="395" y2="850" />
-                        <line x1="445" y1="155" x2="445" y2="850" />
+                        <line
+                            x1="45"
+                            y1="215"
+                            x2="45"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="95"
+                            y1="180"
+                            x2="95"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="145"
+                            y1="150"
+                            x2="145"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="195"
+                            y1="120"
+                            x2="195"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="245"
+                            y1="100"
+                            x2="245"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="295"
+                            y1="90"
+                            x2="295"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="345"
+                            y1="95"
+                            x2="345"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="395"
+                            y1="115"
+                            x2="395"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="445"
+                            y1="155"
+                            x2="445"
+                            y2="850"
+                        />
 
                     </g>
 
@@ -626,20 +689,66 @@ function crearIntro() {
 
                     <g class="decoracion">
 
-                        <circle cx="45" cy="215" r="8" />
-                        <circle cx="95" cy="180" r="8" />
-                        <circle cx="145" cy="150" r="8" />
-                        <circle cx="195" cy="120" r="8" />
-                        <circle cx="245" cy="100" r="8" />
-                        <circle cx="295" cy="90" r="8" />
-                        <circle cx="345" cy="95" r="8" />
-                        <circle cx="395" cy="115" r="8" />
-                        <circle cx="445" cy="155" r="8" />
+                        <circle
+                            cx="45"
+                            cy="215"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="95"
+                            cy="180"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="145"
+                            cy="150"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="195"
+                            cy="120"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="245"
+                            cy="100"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="295"
+                            cy="90"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="345"
+                            cy="95"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="395"
+                            cy="115"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="445"
+                            cy="155"
+                            r="8"
+                        />
 
                     </g>
 
                 </svg>
 
+
+                <!-- PORTÓN DERECHO -->
 
                 <svg
                     class="hoja hoja-derecha"
@@ -671,15 +780,68 @@ function crearIntro() {
 
                     <g class="barrotes">
 
-                        <line x1="55" y1="155" x2="55" y2="850" />
-                        <line x1="105" y1="115" x2="105" y2="850" />
-                        <line x1="155" y1="95" x2="155" y2="850" />
-                        <line x1="205" y1="90" x2="205" y2="850" />
-                        <line x1="255" y1="100" x2="255" y2="850" />
-                        <line x1="305" y1="120" x2="305" y2="850" />
-                        <line x1="355" y1="150" x2="355" y2="850" />
-                        <line x1="405" y1="180" x2="405" y2="850" />
-                        <line x1="455" y1="215" x2="455" y2="850" />
+                        <line
+                            x1="55"
+                            y1="155"
+                            x2="55"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="105"
+                            y1="115"
+                            x2="105"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="155"
+                            y1="95"
+                            x2="155"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="205"
+                            y1="90"
+                            x2="205"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="255"
+                            y1="100"
+                            x2="255"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="305"
+                            y1="120"
+                            x2="305"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="355"
+                            y1="150"
+                            x2="355"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="405"
+                            y1="180"
+                            x2="405"
+                            y2="850"
+                        />
+
+                        <line
+                            x1="455"
+                            y1="215"
+                            x2="455"
+                            y2="850"
+                        />
 
                     </g>
 
@@ -711,15 +873,59 @@ function crearIntro() {
 
                     <g class="decoracion">
 
-                        <circle cx="55" cy="155" r="8" />
-                        <circle cx="105" cy="115" r="8" />
-                        <circle cx="155" cy="95" r="8" />
-                        <circle cx="205" cy="90" r="8" />
-                        <circle cx="255" cy="100" r="8" />
-                        <circle cx="305" cy="120" r="8" />
-                        <circle cx="355" cy="150" r="8" />
-                        <circle cx="405" cy="180" r="8" />
-                        <circle cx="455" cy="215" r="8" />
+                        <circle
+                            cx="55"
+                            cy="155"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="105"
+                            cy="115"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="155"
+                            cy="95"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="205"
+                            cy="90"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="255"
+                            cy="100"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="305"
+                            cy="120"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="355"
+                            cy="150"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="405"
+                            cy="180"
+                            r="8"
+                        />
+
+                        <circle
+                            cx="455"
+                            cy="215"
+                            r="8"
+                        />
 
                     </g>
 
@@ -727,6 +933,10 @@ function crearIntro() {
 
             </div>
 
+
+            <!-- =========================
+                 CENTRO PORTÓN
+            ========================== -->
 
             <div class="centro-porton">
 
@@ -739,11 +949,19 @@ function crearIntro() {
             </div>
 
 
+            <!-- =========================
+                 PARTÍCULAS
+            ========================== -->
+
             <div
                 class="particulas"
                 id="particulas"
             ></div>
 
+
+            <!-- =========================
+                 MENSAJE MARIPOSA
+            ========================== -->
 
             <div
                 class="mensaje-mariposa"
@@ -761,6 +979,10 @@ function crearIntro() {
             </div>
 
 
+            <!-- =========================
+                 MENSAJE INTRO
+            ========================== -->
+
             <div class="mensaje-intro">
 
                 <p class="mensaje-linea">
@@ -773,6 +995,10 @@ function crearIntro() {
 
             </div>
 
+
+            <!-- =========================
+                 MARIPOSA DE VUELO
+            ========================== -->
 
             <div
                 class="mariposa-vuelo"
@@ -795,9 +1021,13 @@ function crearIntro() {
         </section>
 
 
+        <!-- =========================
+             MÚSICA
+        ========================== -->
+
         <audio
             id="musica-fondo"
-            src="audio/musica2.mp3"
+            src="audio/musica1.mp3"
             loop
             preload="auto"
         ></audio>
@@ -809,10 +1039,9 @@ function crearIntro() {
 crearIntro();
 
 
-
-// *=========================*
-// *REFERENCIAS*
-// *=========================*
+// =========================
+// REFERENCIAS
+// =========================
 
 const intro =
     document.getElementById("intro");
@@ -853,10 +1082,9 @@ const elementosEvento =
     );
 
 
-
-// *=========================*
-// *MÚSICA*
-// *=========================*
+// =========================
+// MÚSICA
+// =========================
 
 const musicaFondo =
     document.getElementById(
@@ -865,6 +1093,7 @@ const musicaFondo =
 
 let musicaIniciada =
     false;
+
 
 function reproducirMusica() {
 
@@ -892,11 +1121,18 @@ function reproducirMusica() {
             .then(
                 () => {
 
-                    musicaIniciada = true;
+                    musicaIniciada =
+                        true;
 
-                    const volumenFinal = 0.14;
-                    const duracionFade = 3000;
-                    const tiempoInicio = performance.now();
+                    const volumenFinal =
+                        0.14;
+
+                    const duracionFade =
+                        3000;
+
+                    const tiempoInicio =
+                        performance.now();
+
 
                     function subirVolumen(
                         tiempoActual
@@ -921,6 +1157,7 @@ function reproducirMusica() {
                             ) *
                             progreso;
 
+
                         if (
                             progreso <
                             1
@@ -933,6 +1170,7 @@ function reproducirMusica() {
                         }
 
                     }
+
 
                     requestAnimationFrame(
                         subirVolumen
@@ -955,10 +1193,9 @@ function reproducirMusica() {
 }
 
 
-
-// *=========================*
-// *CUENTA REGRESIVA*
-// *=========================*
+// =========================
+// CUENTA REGRESIVA
+// =========================
 
 const dias =
     document.getElementById(
@@ -991,7 +1228,6 @@ function actualizarTemporizador() {
 
     const ahora =
         new Date();
-
 
     const diferencia =
         fechaEvento -
@@ -1128,10 +1364,9 @@ setInterval(
 );
 
 
-
-// *=========================*
-// *COPIAR ALIAS*
-// *=========================*
+// =========================
+// COPIAR ALIAS
+// =========================
 
 const botonCopiar =
     document.getElementById(
@@ -1178,10 +1413,9 @@ botonCopiar.addEventListener(
 );
 
 
-
-// *=========================*
-// *WHATSAPP*
-// *=========================*
+// =========================
+// WHATSAPP
+// =========================
 
 const botonWhatsapp =
     document.getElementById(
@@ -1199,10 +1433,9 @@ botonWhatsapp.href =
     )}`;
 
 
-
-// *=========================*
-// *CARRUSEL*
-// *=========================*
+// =========================
+// CARRUSEL
+// =========================
 
 const galeriaCarrusel =
     document.querySelector(
@@ -1258,9 +1491,7 @@ function actualizarIndiceGaleria() {
     if (
         !fotosGaleria.length
     ) {
-
         return;
-
     }
 
 
@@ -1272,7 +1503,6 @@ function actualizarIndiceGaleria() {
 
     let fotoMasCercana =
         0;
-
 
     let distanciaMinima =
         Infinity;
@@ -1345,9 +1575,7 @@ function moverGaleriaSuavemente(
     if (
         !galeriaCarrusel
     ) {
-
         return;
-
     }
 
 
@@ -1365,15 +1593,12 @@ function moverGaleriaSuavemente(
     const posicionInicial =
         galeriaCarrusel.scrollLeft;
 
-
     const distancia =
         posicionFinal -
         posicionInicial;
 
-
     const duracion =
         1000;
-
 
     const tiempoInicio =
         performance.now();
@@ -1443,9 +1668,7 @@ function avanzarGaleria() {
     if (
         !galeriaCarrusel
     ) {
-
         return;
-
     }
 
 
@@ -1500,9 +1723,7 @@ function avanzarGaleria() {
 
 
     if (!foto) {
-
         return;
-
     }
 
 
@@ -1651,9 +1872,7 @@ if (
                 event.key !==
                     "ArrowRight"
             ) {
-
                 return;
-
             }
 
 
@@ -1682,10 +1901,9 @@ if (
 }
 
 
-
-// *=========================*
-// *BRILLITOS*
-// *=========================*
+// =========================
+// BRILLITOS
+// =========================
 
 function crearBrillito(
     x,
@@ -1829,17 +2047,15 @@ function detenerBrillos() {
         intervaloBrillos
     );
 
-
     intervaloBrillos =
         null;
 
 }
 
 
-
-// *=========================*
-// *VOLVER AL INICIO*
-// *=========================*
+// =========================
+// VOLVER AL INICIO
+// =========================
 
 function volverAlInicio() {
 
@@ -1859,10 +2075,9 @@ function volverAlInicio() {
 }
 
 
-
-// *=========================*
-// *SECUENCIA PRINCIPAL*
-// *=========================*
+// =========================
+// SECUENCIA PRINCIPAL
+// =========================
 
 async function iniciarSecuencia() {
 
@@ -1873,10 +2088,9 @@ async function iniciarSecuencia() {
 }
 
 
-
-// *=========================*
-// *INICIAR LA MAGIA*
-// *=========================*
+// =========================
+// INICIAR LA MAGIA
+// =========================
 
 let secuenciaIniciada =
     false;
@@ -1887,9 +2101,7 @@ async function iniciarMagia() {
     if (
         secuenciaIniciada
     ) {
-
         return;
-
     }
 
 
@@ -1931,117 +2143,86 @@ async function iniciarMagia() {
 
                 {
                     left: "50%",
-
                     top: "50%",
-
                     transform:
                         "translate(-50%, -50%) rotate(0deg) scale(1)"
                 },
 
                 {
                     left: "65%",
-
                     top: "39%",
-
                     transform:
                         "translate(-50%, -50%) rotate(9deg) scale(1.05)",
-
                     offset: 0.10
                 },
 
                 {
                     left: "77%",
-
                     top: "28%",
-
                     transform:
                         "translate(-50%, -50%) rotate(16deg) scale(1.08)",
-
                     offset: 0.20
                 },
 
                 {
                     left: "63%",
-
                     top: "24%",
-
                     transform:
                         "translate(-50%, -50%) rotate(-7deg) scale(1.11)",
-
                     offset: 0.30
                 },
 
                 {
                     left: "35%",
-
                     top: "31%",
-
                     transform:
                         "translate(-50%, -50%) rotate(-14deg) scale(1.15)",
-
                     offset: 0.42
                 },
 
                 {
                     left: "21%",
-
                     top: "46%",
-
                     transform:
                         "translate(-50%, -50%) rotate(-19deg) scale(1.18)",
-
                     offset: 0.52
                 },
 
                 {
                     left: "34%",
-
                     top: "66%",
-
                     transform:
                         "translate(-50%, -50%) rotate(13deg) scale(1.23)",
-
                     offset: 0.63
                 },
 
                 {
                     left: "67%",
-
                     top: "72%",
-
                     transform:
                         "translate(-50%, -50%) rotate(17deg) scale(1.28)",
-
                     offset: 0.75
                 },
 
                 {
                     left: "78%",
-
                     top: "55%",
-
                     transform:
                         "translate(-50%, -50%) rotate(-7deg) scale(1.34)",
-
                     offset: 0.84
                 },
 
                 {
                     left: "65%",
-
                     top: "43%",
-
                     transform:
                         "translate(-50%, -50%) rotate(-3deg) scale(1.45)",
-
                     offset: 0.91
                 },
 
                 {
                     left: "50%",
-
                     top: "50%",
-
                     transform:
                         "translate(-50%, -50%) rotate(0deg) scale(1.65)"
                 }
@@ -2049,14 +2230,12 @@ async function iniciarMagia() {
             ],
 
             {
-
                 duration: 9000,
 
                 easing:
                     "cubic-bezier(0.45, 0, 0.25, 1)",
 
                 fill: "forwards"
-
             }
         );
 
@@ -2099,42 +2278,36 @@ async function iniciarMagia() {
                 {
                     transform:
                         "translate(-50%, -50%) scale(2.0)",
-
                     offset: 0.15
                 },
 
                 {
                     transform:
                         "translate(-50%, -50%) scale(2.5)",
-
                     offset: 0.30
                 },
 
                 {
                     transform:
                         "translate(-50%, -50%) scale(3.2)",
-
                     offset: 0.45
                 },
 
                 {
                     transform:
                         "translate(-50%, -50%) scale(4.1)",
-
                     offset: 0.60
                 },
 
                 {
                     transform:
                         "translate(-50%, -50%) scale(5.2)",
-
                     offset: 0.75
                 },
 
                 {
                     transform:
                         "translate(-50%, -50%) scale(6.5)",
-
                     offset: 0.88
                 },
 
@@ -2146,14 +2319,12 @@ async function iniciarMagia() {
             ],
 
             {
-
                 duration: 3000,
 
                 easing:
                     "cubic-bezier(0.7, 0, 0.12, 1)",
 
                 fill: "forwards"
-
             }
         );
 
@@ -2261,10 +2432,9 @@ async function iniciarMagia() {
 }
 
 
-
-// *=========================*
-// *ESPERAR*
-// *=========================*
+// =========================
+// ESPERAR
+// =========================
 
 function esperar(ms) {
 
@@ -2282,10 +2452,9 @@ function esperar(ms) {
 }
 
 
-
-// *=========================*
-// *TOQUE / CLICK EN LA MARIPOSA*
-// *=========================*
+// =========================
+// TOQUE / CLICK EN LA MARIPOSA
+// =========================
 
 mariposaVuelo.addEventListener(
     "click",
@@ -2314,9 +2483,8 @@ mariposa.addEventListener(
 );
 
 
-
-// *=========================*
-// *INICIAR*
-// *=========================*
+// =========================
+// INICIAR
+// =========================
 
 iniciarSecuencia();

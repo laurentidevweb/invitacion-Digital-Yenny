@@ -17,6 +17,21 @@ body {
 }
 
 /* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --fondo-jenny: url("img/fondo1.jpg");
+  --fondo-posicion-pc: center center;
+  --fondo-posicion-mobile: center center;
+  --dorado: #d8b56a;
+  --dorado-claro: #e5c982;
+  --dorado-brillo: #f0d998;
+  --fucsia: #ff2f92;
+  --texto-secundario: #f4eee2;
+}
+
+/* =========================
    MARIPOSAS DECORATIVAS FIJAS
 ========================= */
 
@@ -100,19 +115,42 @@ body.mariposas-evento::after {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background:
-    radial-gradient(
-      circle at 50% 25%,
-      #354253 0%,
-      #252f3c 32%,
-      #171e28 67%,
-      #0d1219 100%
-    );
+  background: transparent;
   color: #fff;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
   transition: opacity 1.2s ease;
+}
+
+/* =========================
+   FONDO PINTEREST
+========================= */
+
+.pagina-invitacion::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--fondo-jenny);
+  background-size: cover;
+  background-position:
+    var(--fondo-posicion-pc);
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pagina-invitacion::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(8, 12, 18, 0.48),
+      rgba(8, 12, 18, 0.58)
+    );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .pagina-visible {
@@ -138,14 +176,7 @@ body.mariposas-evento::after {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 50% 45%,
-      #3c4a5b 0%,
-      #293542 32%,
-      #1a232e 67%,
-      #10161e 100%
-    );
+  background: transparent;
   z-index: 5;
   transition:
     opacity 1.4s cubic-bezier(0.65, 0, 0.2, 1),
@@ -157,7 +188,8 @@ body.mariposas-evento::after {
   left: 50%;
   top: 50%;
   width: min(85vw, 520px);
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   opacity: 0;
   filter:
     blur(0.2px)
@@ -191,35 +223,35 @@ body.mariposas-evento::after {
 }
 
 .hero-superior {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(13px, 2vw, 18px);
+  font-size: clamp(15px, 2.2vw, 21px);
   font-weight: 400;
-  letter-spacing: 0.45em;
-  color: #e4e9ee;
+  letter-spacing: 0.43em;
+  color: var(--dorado);
 }
 
 .hero-contenido h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(62px, 13vw, 150px);
+  font-size: clamp(70px, 14vw, 160px);
   line-height: 0.95;
   font-weight: 400;
   letter-spacing: 0.08em;
-  color: #f5f7fa;
+  color: var(--dorado-claro);
   text-shadow:
-    0 0 25px rgba(255, 255, 255, 0.12),
-    0 0 70px rgba(255, 255, 255, 0.08);
+    0 0 25px rgba(216, 181, 106, 0.20),
+    0 0 70px rgba(216, 181, 106, 0.12);
 }
 
 .hero-linea {
-  width: clamp(55px, 12vw, 110px);
+  width: clamp(60px, 12vw, 110px);
   height: 1px;
-  margin: 25px 0 20px;
+  margin: 27px 0 22px;
   background:
     linear-gradient(
       to right,
       transparent,
-      #dce2e8,
+      var(--dorado),
       transparent
     );
   transform: scaleX(0);
@@ -227,9 +259,10 @@ body.mariposas-evento::after {
 
 .hero-fecha {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(13px, 2vw, 18px);
-  letter-spacing: 0.35em;
-  color: #d9e0e7;
+  font-size: clamp(16px, 2.5vw, 22px);
+  letter-spacing: 0.32em;
+  color: var(--dorado-claro);
+  text-decoration: none;
 }
 
 .pagina-visible .hero-mariposa {
@@ -324,14 +357,7 @@ body.mariposas-evento::after {
   align-items: flex-start;
   justify-content: center;
   overflow: visible;
-  background:
-    radial-gradient(
-      circle at 50% 15%,
-      #344150 0%,
-      #26313e 30%,
-      #18212c 63%,
-      #0d131b 100%
-    );
+  background: transparent;
   opacity: 0;
   transform:
     scale(0.985)
@@ -360,7 +386,8 @@ body.mariposas-evento::after {
   left: 50%;
   top: 50%;
   width: min(100vw, 650px);
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   opacity: 0.045;
   filter: blur(0.5px);
   pointer-events: none;
@@ -379,7 +406,7 @@ body.mariposas-evento::after {
 .evento-contenido {
   position: relative;
   z-index: 5;
-  width: min(88vw, 620px);
+  width: min(90vw, 650px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,15 +415,16 @@ body.mariposas-evento::after {
 }
 
 /* =========================
-   ETIQUETA
+   UNA NOCHE
 ========================= */
 
 .evento-etiqueta {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(20px, 1.8vw, 16px);
-  letter-spacing: 0.42em;
-  color: #d1d9e1;
-  margin-bottom: 10px;
+  font-size: clamp(18px, 2.3vw, 22px);
+  letter-spacing: 0.35em;
+  color: var(--dorado);
+  margin-bottom: 13px;
+  text-decoration: none;
 }
 
 /* =========================
@@ -405,11 +433,11 @@ body.mariposas-evento::after {
 
 .evento-titulo {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px, 8vw, 78px);
+  font-size: clamp(48px, 8.5vw, 84px);
   font-weight: 400;
   font-style: italic;
   line-height: 1;
-  color: #f1f4f7;
+  color: var(--dorado-claro);
   letter-spacing: 0.015em;
 }
 
@@ -418,14 +446,14 @@ body.mariposas-evento::after {
 ========================= */
 
 .evento-linea {
-  width: clamp(60px, 12vw, 100px);
+  width: clamp(65px, 12vw, 105px);
   height: 1px;
-  margin: 28px 0 25px;
+  margin: 30px 0 27px;
   background:
     linear-gradient(
       to right,
       transparent,
-      #c9d0d7,
+      var(--dorado),
       transparent
     );
 }
@@ -438,24 +466,29 @@ body.mariposas-evento::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(17px, 3vw, 24px);
-  letter-spacing: 0.18em;
-  color: #e7ebef;
+  font-size: clamp(21px, 3.4vw, 28px);
+  letter-spacing: 0.15em;
+  color: var(--texto-secundario);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .evento-separador {
-  color: #9da7b1;
-  font-size: 16px;
+  color: var(--dorado);
+  font-size: 19px;
+  text-decoration: none;
 }
 
 .evento-dia-semana {
-  margin-top: 12px;
+  margin-top: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.5em;
-  color: #b7c0c9;
+  font-size: 21px;
+  letter-spacing: 0.38em;
+  color: var(--texto-secundario);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 /* =========================
@@ -463,27 +496,41 @@ body.mariposas-evento::after {
 ========================= */
 
 .evento-detalle {
-  width: min(100%, 440px);
-  margin-top: 45px;
+  width: min(100%, 470px);
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
+  gap: 12px;
 }
 
 .detalle-etiqueta {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.4em;
-  color: #c0c8d0;
+  font-size: 21px;
+  letter-spacing: 0.30em;
+  color: var(--dorado);
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-color: var(--dorado);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
 }
 
 .detalle-valor {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(12px, 2vw, 15px);
-  line-height: 1.5;
-  letter-spacing: 0.12em;
-  color: #e7ebef;
+  font-size: clamp(15px, 2.3vw, 19px);
+  line-height: 1.6;
+  letter-spacing: 0.10em;
+  color: var(--texto-secundario);
+}
+
+/* =========================
+   LA QUINTA
+========================= */
+
+.quinta-fucsia {
+  color: #fff;
+  text-shadow: none;
 }
 
 /* =========================
@@ -491,7 +538,7 @@ body.mariposas-evento::after {
 ========================= */
 
 .evento-dress {
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 /* =========================
@@ -501,22 +548,22 @@ body.mariposas-evento::after {
 .evento-decoracion {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 45px;
+  gap: 9px;
+  margin-top: 50px;
 }
 
 .evento-decoracion span {
   display: block;
-  width: 24px;
+  width: 27px;
   height: 1px;
-  background: #87919c;
+  background: var(--dorado);
 }
 
 .evento-decoracion i {
   display: block;
-  width: 5px;
-  height: 5px;
-  border: 1px solid #b9c1c9;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--dorado);
   transform: rotate(45deg);
 }
 
@@ -567,7 +614,8 @@ body.mariposas-evento::after {
   height: 45vw;
   max-width: 500px;
   max-height: 500px;
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   background:
     radial-gradient(
       circle,
@@ -589,7 +637,8 @@ body.mariposas-evento::after {
   top: 50%;
   width: min(96vw, 1000px);
   height: min(94vh, 900px);
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   display: flex;
   overflow: visible;
   z-index: 20;
@@ -663,7 +712,8 @@ body.mariposas-evento::after {
   top: 50%;
   width: 86px;
   height: 86px;
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   z-index: 40;
   transition: opacity 0.8s ease;
 }
@@ -674,7 +724,8 @@ body.mariposas-evento::after {
   top: 50%;
   width: 72px;
   height: 72px;
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   border-radius: 50%;
   background: #080808;
   border: 2px solid #d8d8d8;
@@ -750,7 +801,7 @@ body.mariposas-evento::after {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: min(90vw, 700px);
+  width: min(90vw, 760px);
   transform:
     translate(-50%, -50%)
     translateY(30px);
@@ -765,7 +816,7 @@ body.mariposas-evento::after {
 
 .mensaje-linea {
   color: #f4f4f4;
-  font-size: clamp(21px, 3vw, 34px);
+  font-size: clamp(23px, 3.3vw, 38px);
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -798,7 +849,8 @@ body.mariposas-evento::after {
   top: 50%;
   width: 90px;
   height: 90px;
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
   z-index: 100;
   pointer-events: none;
   will-change: left, top, transform;
@@ -842,55 +894,83 @@ body.mariposas-evento::after {
 ========================= */
 
 .temporizador {
-  width: min(100%, 500px);
-  margin-top: 50px;
+  width: min(100%, 520px);
+  margin-top: 55px;
   text-align: center;
 }
 
 .temporizador-titulo {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.5em;
-  color: #c0c8d0;
+  font-size: 21px;
+  letter-spacing: 0.30em;
+  color: var(--dorado);
+  text-decoration: underline;
+  text-decoration-color: var(--dorado);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  font-weight: 500;
 }
 
 .temporizador-valores {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .temporizador-unidad {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 55px;
+  min-width: 62px;
 }
 
 .temporizador-numero {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(25px, 6vw, 42px);
+  font-size: clamp(30px, 6.5vw, 46px);
   font-weight: 300;
-  color: #edf1f5;
+  color: var(--texto-secundario);
   letter-spacing: 0.05em;
   line-height: 1;
 }
 
 .temporizador-label {
-  margin-top: 8px;
+  margin-top: 9px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.25em;
-  color: #aeb7c0;
+  color: var(--texto-secundario);
 }
 
-.temporizador-separador {
-  color: #9ca6b0;
-  font-size: 22px;
-  line-height: 1;
-  margin-top: 3px;
+/* =========================
+   BOTÓN CONFIRMAR
+========================= */
+
+.boton-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 13px 25px;
+  border: 1px solid var(--dorado);
+  background: transparent;
+  color: var(--dorado-claro);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+  background: var(--dorado-claro);
+  color: #18212b;
+  border-color: var(--dorado-claro);
 }
 
 /* =========================
@@ -901,15 +981,16 @@ body.mariposas-evento::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 4px;
-  min-width: 165px;
-  padding: 11px 22px;
-  border: 1px solid #8995a0;
-  color: #edf1f5;
+  min-width: 190px;
+  padding: 13px 25px;
+  border: 1px solid var(--dorado);
+  background: transparent;
+  color: var(--dorado-claro);
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.25em;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -917,18 +998,31 @@ body.mariposas-evento::after {
 }
 
 .boton-ubicacion:hover {
-  background: #edf1f5;
+  background: var(--dorado-claro);
   color: #18212b;
-  border-color: #edf1f5;
+  border-color: var(--dorado-claro);
 }
 
 /* =========================
-   MI ALIAS
+   CONFIRMAR ASISTENCIA
+========================= */
+
+.confirmar-asistencia {
+  width: min(100%, 470px);
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================
+   ALIAS
 ========================= */
 
 .datos-regalo {
-  width: min(100%, 440px);
-  margin-top: 50px;
+  width: min(100%, 470px);
+  margin-top: 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -937,18 +1031,22 @@ body.mariposas-evento::after {
 
 .datos-regalo-titulo {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.42em;
-  color: #c0c8d0;
-  margin-bottom: 16px;
+  color: var(--dorado);
+  margin-bottom: 18px;
+  text-decoration-line: underline;
+  text-decoration-color: var(--dorado);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
 }
 
 .datos-regalo-alias {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(15px, 3vw, 20px);
+  font-size: clamp(18px, 3.2vw, 23px);
   letter-spacing: 0.18em;
-  color: #edf1f5;
-  margin-bottom: 16px;
+  color: var(--texto-secundario);
+  margin-bottom: 18px;
 }
 
 /* =========================
@@ -956,13 +1054,13 @@ body.mariposas-evento::after {
 ========================= */
 
 .boton-copiar {
-  min-width: 165px;
-  padding: 11px 22px;
-  border: 1px solid #8995a0;
+  min-width: 180px;
+  padding: 12px 24px;
+  border: 1px solid var(--dorado);
   background: transparent;
-  color: #edf1f5;
+  color: var(--dorado-claro);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.25em;
   cursor: pointer;
   transition:
@@ -972,69 +1070,9 @@ body.mariposas-evento::after {
 }
 
 .boton-copiar:hover {
-  background: #edf1f5;
+  background: var(--dorado-claro);
   color: #18212b;
-  border-color: #edf1f5;
-}
-
-/* =========================
-   CONFIRMAR ASISTENCIA
-========================= */
-
-.confirmar-asistencia {
-  width: min(100%, 440px);
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.confirmar-titulo {
-  width: min(100%, 320px);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  line-height: 1.6;
-  letter-spacing: 0.26em;
-  color: #c0c8d0;
-  margin-bottom: 13px;
-}
-
-.confirmar-destinatario {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  color: #edf1f5;
-  margin-bottom: 16px;
-}
-
-/* =========================
-   BOTÓN WHATSAPP
-========================= */
-
-.boton-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 205px;
-  padding: 11px 22px;
-  border: 1px solid #8995a0;
-  background: transparent;
-  color: #edf1f5;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.boton-whatsapp:hover {
-  background: #edf1f5;
-  color: #18212b;
-  border-color: #edf1f5;
+  border-color: var(--dorado-claro);
 }
 
 /* =========================
@@ -1043,7 +1081,7 @@ body.mariposas-evento::after {
 
 .galeria-momentos {
   width: 100%;
-  margin-top: 65px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1051,24 +1089,26 @@ body.mariposas-evento::after {
 
 .galeria-etiqueta {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.48em;
-  color: #c4ccd4;
+  font-size: 21px;
+  letter-spacing: 0.30em;
+  color: var(--dorado);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .galeria-etiqueta::after {
   content: "";
   display: block;
-  width: 32px;
+  width: 35px;
   height: 1px;
-  margin: 13px auto 0;
+  margin: 14px auto 0;
   background:
     linear-gradient(
       to right,
       transparent,
-      #aeb7c0,
+      var(--dorado),
       transparent
     );
 }
@@ -1097,7 +1137,7 @@ body.mariposas-evento::after {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .indicador-foto {
@@ -1105,7 +1145,7 @@ body.mariposas-evento::after {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #78838e;
+  background: var(--dorado);
   opacity: 0.65;
   transition:
     width 0.35s ease,
@@ -1116,7 +1156,7 @@ body.mariposas-evento::after {
 .indicador-foto.indicador-activo {
   width: 7px;
   height: 7px;
-  background: #e8edf1;
+  background: var(--dorado-claro);
   opacity: 1;
 }
 
@@ -1164,6 +1204,7 @@ body.mariposas-evento::after {
 ========================= */
 
 @media (hover: hover) and (pointer: fine) {
+
   .galeria-pista img:hover {
     transform: scale(1.015);
     border-color: rgba(245, 248, 250, 0.9);
@@ -1178,6 +1219,11 @@ body.mariposas-evento::after {
 ========================= */
 
 @media (max-width: 600px) {
+
+  .pagina-invitacion::before {
+    background-position:
+      var(--fondo-posicion-mobile);
+  }
 
   body::before,
   body::after {
@@ -1206,7 +1252,8 @@ body.mariposas-evento::after {
   }
 
   .mensaje-linea {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1.5;
   }
 
   .centro-porton {
@@ -1239,157 +1286,198 @@ body.mariposas-evento::after {
       rgba(255, 255, 255, 0.75);
   }
 
-  /* HERO */
+  /* =========================
+     HERO MOBILE
+  ========================= */
 
   .hero-mariposa {
     width: 90vw;
   }
 
   .hero-contenido h1 {
-    font-size: clamp(58px, 18vw, 100px);
+    font-size:
+      clamp(62px, 19vw, 105px);
   }
 
   .hero-superior {
-    font-size: 12px;
-    letter-spacing: 0.38em;
+    font-size: 25px;
+    letter-spacing: 0.36em;
   }
 
   .hero-fecha {
-    font-size: 12px;
-    letter-spacing: 0.28em;
+    font-size: 17px;
+    letter-spacing: 0.22em;
+    text-decoration: none;
   }
 
-  /* EVENTO */
+  /* =========================
+     EVENTO MOBILE
+  ========================= */
 
   .evento-contenido {
-    width: 92vw;
+    width: 94vw;
     padding: 11vh 15px 60px;
   }
 
+  .evento-etiqueta {
+    font-size: 20px;
+    letter-spacing: 0.28em;
+    text-decoration: none;
+  }
+
   .evento-titulo {
-    font-size: 42px;
+    font-size: 46px;
+  }
+
+  .evento-linea {
+    margin: 28px 0 25px;
+  }
+
+  .evento-fecha {
+    font-size: 21px;
+    gap: 9px;
+    letter-spacing: 0.10em;
+    text-decoration: none;
+  }
+
+  .evento-separador {
+    font-size: 16px;
+  }
+
+  .evento-dia-semana {
+    font-size: 20px;
+    letter-spacing: 0.30em;
+    text-decoration: none;
   }
 
   .evento-detalle {
-    margin-top: 38px;
+    margin-top: 42px;
+    gap: 11px;
   }
 
   .detalle-etiqueta {
-    font-size: 10px;
-    letter-spacing: 0.38em;
+    font-size: 20px;
+    letter-spacing: 0.24em;
+    text-underline-offset: 6px;
   }
 
   .detalle-valor {
-    font-size: 11px;
-    letter-spacing: 0.1em;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
   }
 
   .evento-dress {
-    margin-top: 26px;
+    margin-top: 30px;
   }
 
   .evento-decoracion {
-    margin-top: 38px;
+    margin-top: 40px;
   }
 
-  /* CUENTA REGRESIVA */
+  /* =========================
+     CUENTA REGRESIVA MOBILE
+  ========================= */
 
   .temporizador {
-    margin-top: 42px;
+    margin-top: 46px;
   }
 
   .temporizador-titulo {
-    font-size: 9px;
+    font-size: 20px;
+    letter-spacing: 0.26em;
+    text-decoration: underline;
+    text-underline-offset: 6px;
   }
 
   .temporizador-valores {
-    gap: 6px;
+    gap: 5px;
   }
 
   .temporizador-unidad {
-    min-width: 48px;
+    min-width: 52px;
   }
 
   .temporizador-numero {
-    font-size: 27px;
+    font-size: 30px;
   }
 
   .temporizador-label {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .temporizador-separador {
-    font-size: 18px;
-    margin-top: 2px;
+    font-size: 19px;
+    margin-top: 3px;
   }
 
-  /* UBICACIÓN */
+  /* =========================
+     UBICACIÓN MOBILE
+  ========================= */
 
   .boton-ubicacion {
-    min-width: 155px;
-    padding: 10px 20px;
-    font-size: 9px;
+    min-width: 165px;
+    padding: 11px 20px;
+    font-size: 10px;
   }
 
-  /* ALIAS */
+  /* =========================
+     ALIAS MOBILE
+  ========================= */
 
   .datos-regalo {
-    margin-top: 42px;
+    margin-top: 45px;
   }
 
   .datos-regalo-titulo {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    text-underline-offset: 6px;
   }
 
   .datos-regalo-alias {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .boton-copiar {
-    min-width: 155px;
-    padding: 10px 20px;
-    font-size: 9px;
+    min-width: 165px;
+    padding: 11px 20px;
+    font-size: 10px;
   }
 
-  /* WHATSAPP */
+  /* =========================
+     BOTÓN CONFIRMAR MOBILE
+  ========================= */
 
   .confirmar-asistencia {
-    margin-top: 42px;
-  }
-
-  .confirmar-titulo {
-    width: min(100%, 300px);
-    font-size: 9px;
-    line-height: 1.6;
-    letter-spacing: 0.24em;
-  }
-
-  .confirmar-destinatario {
-    font-size: 11px;
+    margin-top: 45px;
   }
 
   .boton-whatsapp {
-    min-width: 195px;
-    padding: 10px 20px;
-    font-size: 9px;
+    min-width: 210px;
+    padding: 12px 20px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
   }
 
-  /* GALERÍA */
+  /* =========================
+     GALERÍA MOBILE
+  ========================= */
 
   .galeria-momentos {
-    margin-top: 52px;
+    margin-top: 56px;
   }
 
   .galeria-etiqueta {
-    margin-bottom: 24px;
-    font-size: 9px;
-    letter-spacing: 0.43em;
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 0.27em;
+    text-decoration: none;
   }
 
   .galeria-etiqueta::after {
-    width: 26px;
-    margin-top: 11px;
+    width: 28px;
+    margin-top: 12px;
   }
 
   .galeria-pista {
