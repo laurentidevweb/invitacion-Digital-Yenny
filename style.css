@@ -179,25 +179,17 @@ body.mariposas-evento::after {
 }
 
 .pagina-invitacion::before {
-
     content: "";
-
     position: fixed;
-
     inset: 0;
 
-    background-image:
-        var(--fondo-jenny);
-
+    background-color: #fff;
+    background-image: var(--fondo-jenny);
     background-size: cover;
-
-    background-position:
-        var(--fondo-posicion-pc);
-
+    background-position: var(--fondo-posicion-pc);
     background-repeat: no-repeat;
 
     z-index: 0;
-
     pointer-events: none;
 }
 
