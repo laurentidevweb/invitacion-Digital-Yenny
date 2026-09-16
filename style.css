@@ -177,7 +177,6 @@ body.mariposas-evento::after {
     transition:
         opacity 1.2s ease;
 }
-
 .pagina-invitacion::before {
     content: "";
     position: fixed;
@@ -190,6 +189,7 @@ body.mariposas-evento::after {
     z-index: 0;
     pointer-events: none;
 }
+
 .pagina-invitacion::after {
 
     content: "";
@@ -2505,12 +2505,9 @@ body.mariposas-evento::after {
 }
 
 @media (max-width: 600px) {
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-    .pagina-invitacion {
-        overflow-x: hidden;
+    .pagina-invitacion::before,
+    .pagina-invitacion::after {
+        height: 100dvh;
+        min-height: 100dvh;
     }
 }
