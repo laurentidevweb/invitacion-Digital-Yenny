@@ -128,7 +128,7 @@ body.mariposas-evento::after {
 
   width: 100%;
 
-  min-height: 100vh;
+  min-height: 100%;
 
   background: transparent;
 
@@ -144,11 +144,11 @@ body.mariposas-evento::after {
 }
 .pagina-invitacion::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   background-color: #fff;
   background-image: var(--fondo-jenny);
-  background-size: 70% auto;
+  background-size: cover;
   background-position: var(--fondo-posicion-pc);
   background-repeat: no-repeat;
   z-index: 0;
@@ -158,7 +158,7 @@ body.mariposas-evento::after {
 .pagina-invitacion::after {
   content: "";
 
-  position: fixed;
+  position: absolute;
 
   inset: 0;
 
@@ -1555,11 +1555,6 @@ body.mariposas-evento::after {
 ========================= */
 
 @media (max-width: 600px) {
-  .pagina-invitacion::before {
-    background-size: auto 1200px;
-    background-position: center center;
-  }
-
   body::before,
   body::after {
     top: 18px;
