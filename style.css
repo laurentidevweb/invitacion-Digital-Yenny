@@ -1556,7 +1556,7 @@ body.mariposas-evento::after {
 
 @media (max-width: 600px) {
   .pagina-invitacion::before {
-    background-size: auto 100svh;
+    background-size: auto 1200px;
     background-position: center center;
   }
 
